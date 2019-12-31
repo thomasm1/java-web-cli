@@ -1,0 +1,73 @@
+body {
+        background-color: aliceblue; 
+    }
+nav {
+	position: static;
+	bottom: 0;
+	width: 100%;
+	height: 90px;
+}
+nav.navbar {
+	padding:2%;
+	
+	background-color: lightblue;
+}
+.log {	
+		color:white;
+		padding:2px 10px;
+        border-radius:10px;
+}
+    .container {
+    padding:0px 3%; 
+    min-height:700px;
+    }
+    h2,h3 {
+        text-align:center;
+    }  
+    button.btn-info a {
+    color:white;
+    float:right;
+    } 
+    #info {
+        background-color: lightblue; 
+        width:100%;
+        padding: 15px;
+        margin: 10px 10px 20px 10px;
+        border:solid 1px blue;
+        border-radius:5px;
+        min-height:360px;
+    } 
+    #rolecolor {
+        color: steelblue;
+    }
+
+    h4#rolecolor {
+        text-align: center;
+        padding: 10px;
+        border: steelblue;
+    } 
+    button.btn-info a {
+    color:white;
+    }
+    
+    td {
+        color: blue;
+        width: 200px;
+    } 
+    button.btn-info a {
+    color:white;
+    }
+    
+.footer {	  
+	width: 100%;
+	height: 80px;
+	padding:15px;
+	background-color: lightblue;
+	text-align:center;
+}
+.center {
+	text-align:center
+}
+.hr-blue {
+	fill:blue;
+}

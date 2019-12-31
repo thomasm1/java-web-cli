@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	default-init-method="defaultInit" default-destroy-method="defaultInit"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+
+	<bean id="user" class="net.thomasmaestas.java.bean0.User"
+		scope="prototype" init-method="onCreate" destroy-method="onDestroy"
+		factory-method="getInstance">
+		<constructor-arg value="777" index="0" name="userId"></constructor-arg>
+		<constructor-arg value="Tom" index="1" name="name"></constructor-arg>
+		<constructor-arg value="hr" index="2" name="dept"></constructor-arg>
+		<property name="dept" value="benco">
+			<!-- <value> 1000</value> -->
+		</property>
+		<property name="address" ref="address"></property>
+	</bean>
+
+	<bean id="userReq" class="net.thomasmaestas.java.bean0.User"
+		init-method="onCreate" destroy-method="onDestroy"
+		factory-method="createUser" factory-bean="userFactory"
+		scope="prototype">
+		<constructor-arg value="888" index="0" name="userId"></constructor-arg>
+		<constructor-arg value="Tom M." index="1" name="name"></constructor-arg>
+		<constructor-arg value="hr" index="2" name="dept"></constructor-arg>
+		<property name="dept" value="academic">
+			<!-- <value> 1000</value> -->
+		</property>
+		<property name="address" ref="address"></property>
+	</bean>
+	<bean id="address"
+		class="net.thomasmaestas.java.bean0.UserAddress">
+		<constructor-arg name="msgHandle" value="thomasm1@"></constructor-arg>
+		<constructor-arg name="userId" value="455" type="int"></constructor-arg>
+	</bean>
+	<bean id="addressP"
+		class="net.thomasmaestas.java.bean0.UserAddress"
+		p:msgHandle="sarah.quincy@" p:userId="333">
+	</bean>
+	<bean id="userFactory"
+		class="net.thomasmaestas.java.bean0.UserFactory">
+	</bean>
+	<bean id="messagelist"
+		class="net.thomasmaestas.java.bean0.MessageList">
+		<constructor-arg value="Employee Message List">
+		</constructor-arg>
+		<constructor-arg>
+			<!-- <list> -->
+			<set>
+				<value> FirstReq</value>
+				<value> FirstResp</value>
+				<value> DocumentProvide</value>
+				<value> DocumentReq</value>
+				<value> FinancialReq</value>
+				<value> FinancialResp</value>
+				<value> Supervisor_Approve</value>
+				<value> AutoTime_Approve</value>
+				<value> DeptHead_Approve</value>
+				<value> Benefits_Approve</value>
+				<value> Overriding_Approve</value>
+				<value> Rejection</value>
+				<value> Rejection_Reasons</value>
+			</set>
+			<!-- </list> -->
+		</constructor-arg>
+	</bean>
+
+	<bean id="department"
+		class="net.thomasmaestas.java.bean0.Department">
+
+		<property name="deptHead" ref="board"></property>
+		<property name="titles">
+			<list>
+				<ref bean="hr" />
+				<ref bean="board" />
+				<ref bean="academic" />
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="board" class="net.thomasmaestas.java.bean0.Title">
+		<property name="name" value="emp_b1"></property>
+		<property name="dept" value="board"></property>
+	</bean>
+	<bean id="academic" class="net.thomasmaestas.java.bean0.Title">
+		<property name="name" value="emp_a1"></property>
+		<property name="dept" value="academic"></property>
+	</bean>
+	<bean id="hr" class="net.thomasmaestas.java.bean0.Title">
+		<property name="name" value="emp_h1"></property>
+		<property name="dept" value="hr"></property>
+	</bean>
+
+	<bean id="title" class="net.thomasmaestas.java.bean0.Title">
+		<property name="tasks">
+			<props>
+				<prop key="Rejection_Reasons">supervisor</prop>
+				<prop key="DeptHead_Approve">deptHead</prop>
+				<prop key="Benco_Approve">bencoRep</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="task1" class="net.thomasmaestas.java.bean0.Reimburse">
+		<property name="name" value="emp_b1"></property>
+		<property name="type" value="task1"></property>
+	</bean>
+	<bean id="task2" class="net.thomasmaestas.java.bean0.Reimburse">
+		<property name="name" value="emp_a1"></property>
+		<property name="type" value="task2"></property>
+	</bean>
+	<bean id="task3" class="net.thomasmaestas.java.bean0.Reimburse">
+		<property name="name" value="emp_h1"></property>
+		<property name="type" value="task3"></property>
+	</bean>
+
+ <bean id="request" class="net.thomasmaestas.java.bean0.Request">
+		<constructor-arg value="Request">
+		</constructor-arg>
+		<constructor-arg>
+			<set>
+				<value>certification</value>
+				<value>course</value>
+				<value>seminar</value>
+				<value>conference</value>
+			</set>
+		</constructor-arg>
+	</bean>   
+ 
+
+	<bean id="certification" class="net.thomasmaestas.java.bean0.Reimburse">
+		<property name="name" value="AWS Developer Assoc."></property>
+		<property name="type" value="certification"></property>
+	</bean>
+	<bean id="course" class="net.thomasmaestas.java.bean0.Reimburse">
+		<property name="name" value="A++"></property>
+		<property name="type" value="course"></property>
+	</bean>
+	<bean id="conference" class="net.thomasmaestas.java.bean0.Reimburse">
+		<property name="name" value="AWS Reinvent 2019"></property>
+		<property name="type" value="conference"></property>
+	</bean>
+
+	<bean id="financials"
+		class="net.thomasmaestas.java.bean0.Financials">
+
+		<property name="requests">
+			<props>
+				<prop key="certification"></prop>
+				<prop key="course"></prop>
+				<prop key="conference"></prop>
+			</props>
+		</property>
+	<property name="reimburses">
+			<map>
+				<entry key="certification" value-ref="certification"></entry>
+				<entry key="course" value-ref="course"></entry>
+				<entry key="conference" value-ref="conference"></entry>
+			</map>
+		</property>
+	
+	</bean>
+</beans>

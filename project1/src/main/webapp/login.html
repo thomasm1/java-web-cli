@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <title>Project-1</title>
+<link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css"
+	rel="stylesheet">
+    <link  href="proj1style.css" rel="stylesheet" /> 
+<style>
+ 
+</style> 
+  <link rel="shortcut favicon"  href="favicon.ico"  /> 
+  
+</head>
+<body>  
+	<nav class="navbar navbar-default"> 
+		<ul class="nav navbar-nav ">
+			<li class="active">	
+		<a href="#" class="navbar-brand center"><em>Project-1</em>
+		</a>
+	</li>   
+		</ul> 
+	<ul class="nav navbar-nav navbar-right log">
+	 <li><a href="/project1/register.html">REGISTER</a></li> 
+		</ul> 
+	</nav> 
+   <div class="container">
+   
+   <h3>MEMBER PORTAL</h3>  
+      <div id="info">
+   
+    <!-- <form action="/project1/login.do" method="post"> -->
+  <p> <!-- 	<font color="red">${errorMessage}</font> --> </p> 
+    <h4 id="text">USERNAME</h4>
+    <input id="username" type="text" name="username" />
+    <h4 id="text">PASSWORD</h4>
+    <input id="password" type="text"  name="password" />
+    <hr> 
+       <button  class="btn btn-primary" onclick="login()">LOGIN </button>
+ <!--   <input class="btn btn-primary" type="submit" value="SUBMIT" />
+    	</form> -->
+    	</div>  
+    </div> 
+<footer class="footer"> 
+   <div>
+    <p>Project 1 Footer - Revature<br />
+    <small>Copyright &copy; 2020 &nbsp;</small></p>
+   </div>
+</footer>
+    
+    </body>
+<script>
+
+
+    let login = function () { 
+
+        let u = document.getElementById("username");
+        let username;  // just declare
+        username = u.value; // overwrite
+
+        let p = document.getElementById("password");
+        let password;
+        password = p.value;
+
+        let xhttp = new XMLHttpRequest();
+
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) { 
+                console.log("readyState: " + this.readyState + ", status: " + this.status);
+            }
+        }
+        xhttp.open("POST", "http://localhost:8090/project1/login.do", true);
+        xhttp.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+        xhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+        xhttp.send( "username=" + username + "&password=" + password);
+        console.log(" submitted by: *" + username + ", password *" + password);
+		redirect(username);
+
+    }   
+    let redirect = function(username) { 
+		  let attemptUser = getCookie("attemptUser");
+		  let updateSID = getCookie("updateSID");
+		  let validUser = getCookie("validUser");  
+		  if ((validUser == "validated")) { // && (username == attemptUser)
+		   console.log(" logged in as "+username+", valid " + validUser);
+		   window.location.href="/project1/index.html";
+		  } else {
+		    alert("please try again! attempt by user "+username+", valid " + validUser); 
+		    window.location.href="/project1/login.html";
+		  }  
+		}
+ 	
+    let getCookie = function(cname) {
+		  var name = cname + "=";
+		  var decodedCookie = decodeURIComponent(document.cookie);
+		  var ca = decodedCookie.split(';');
+		  for(var i = 0; i <ca.length; i++) {
+		    var c = ca[i];
+		    while (c.charAt(0) == ' ') {
+		      c = c.substring(1);
+		    }
+		    if (c.indexOf(name) == 0) {
+		      return c.substring(name.length, c.length);
+		    }
+		  }
+		  return "";
+		}
+</script>
+
+	<script src="webjars/jquery/1.9.1/jquery.min.js"></script>
+	<script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</html>

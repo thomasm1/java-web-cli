@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" xml:lang="en">
+
+<head>
+
+
+  <meta charset="utf-8" />
+  <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="Technology   " name="description" />
+  <meta content="Thomas M. Maestas" name="author" />
+  <title>NASA API</title> 
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <style>
+    body {
+      background-color: aliceblue;
+    }
+
+    button {
+      cursor: pointer;
+      margin: 15px 15px;
+    }
+
+    h3 {
+      text-align: center;
+    }
+
+    pre#returnObject {
+      max-width: 100%;
+      overflow: scroll;
+    }
+
+    .media {
+      width: 600px;
+      max-width: 100%;
+    }
+
+    .container {
+      margin-top: 5%;
+      border: solid 1px blue;
+      max-width: 80%;
+      min-height: 700px;
+      background-color: white;
+    }
+
+    #marsreader.marsreader {
+      margin: 10%;
+      border: solid 1px blue;
+      max-width: 80%;
+      padding: 10px;
+      display: none;
+    }
+
+    #nasa {
+      margin-left: 20%;
+      margin-right: 20%;
+    }
+
+    #footer p {
+      padding: 30px;
+      text-align: center;
+    }
+  </style>
+  <link rel="shortcut favicon"  href="favicon.ico"  /> 
+</head>
+
+<body class="with-top-navbar">
+  <div class="container" id="foreground">
+    <h3 class="dailytech">NASA API</h3>
+    <button class="btn btn-primary" onclick="showNasa()">Get NASA
+      API</button>
+    <button class="btn btn-primary" onclick="hideNasa()">Hide NASA
+      API</button>
+    <div id="marsreader" class="marsreader">
+
+      <pre id="reqObject"></pre>
+      <img id="apod_img_id" class="zoom media" />
+      <iframe id="apod_vid_id" class="media">video</iframe>
+      <p id="copyright">copyright</p>
+      <hr style="width: 100%">
+
+      <h5 id="apod_title">title</h5>
+      <p id="apod_explaination">explanation</p>
+      <pre id="returnObject">object</pre>
+
+
+    </div>
+
+    <script>
+      let already = false;
+      let showNasa = function () {
+        document.getElementById("marsreader").style.display = (already==false) ? getNasa() : "block";
+      }
+
+      let hideNasa = function () {
+        document.getElementById("marsreader").style.display = "none";
+      }
+
+      let getNasa = function () {
+        // OLD_KEY: NNKOjkoul8n1CH18TWA9gwngW1s1SmjESPjNoUFo   https://api.nasa.gov/
+        // NEW_KEY: p2o1kCukELyMEhVm912JFO17GgidlBIx4dhi4Ppu   https://api.nasa.gov/
+        let url = "https://api.nasa.gov/planetary/apod?api_key=mF6DQEqY3WtCubgab5P2otQQ6bP1b8nY24VmiJw0";
+        let x = new XMLHttpRequest();
+
+        x.onreadystatechange = function () {
+
+          if (x.readyState == 4 && (x.statusText == 200 || "OK")) {
+            console.log("XMLHttpRequest().readyState: " + x.readyState, "XMLHttpRequest().statusText: " + x.statusText);
+            already = true;
+            const result = JSON.parse(this.responseText);
+
+            document.getElementById("marsreader").style.display = "block";
+            if (result.copyright != "") {
+              document.getElementById("copyright").innerHTML = "Image Credits: " + result.copyright;
+            }
+            else {
+              document.getElementById("copyright").innerHTML = "Image Credits: " + "Public Domain";
+            }
+
+            if (result.media_type == "video") {
+              document.getElementById("apod_img_id").style.display = "none";
+              document.getElementById("apod_vid_id").setAttribute("src", result.url);
+            }
+            else {
+              document.getElementById("apod_vid_id").style.display = "none";
+              document.getElementById("apod_img_id").setAttribute("src", result.url);
+            }
+            document.getElementById("reqObject").text = url;
+            document.getElementById("returnObject").innerHTML = JSON.stringify(result, null, 4);
+
+            document.getElementById("apod_explaination").innerHTML = result.explanation;
+            document.getElementById("apod_title").innerHTML = result.title;
+          }
+        }
+        x.open("GET", url, true);
+        x.send();
+      }  
+        // $.ajax({
+        //   url: url,
+        //   success: function(result){
+        //   if("copyright" in result) {
+        //     $("#copyright").text("Image Credits: " + result.copyright);
+        //   }
+        //   else {
+        //     $("#copyright").text("Image Credits: " + "Public Domain");
+        //   } 
+        //   if(result.media_type == "video") {
+        //     $("#apod_img_id").css("display", "none"); 
+        //     $("#apod_vid_id").attr("src", result.url);
+        //   }
+        //   else {
+        //     $("#apod_vid_id").css("display", "none"); 
+        //     $("#apod_img_id").attr("src", result.url);
+        //   }
+        //   $("#reqObject").text(url);
+        //   $("#returnObject").text(JSON.stringify(result, null, 4));  
+        //   $("#apod_explaination").text(result.explanation);
+        //   $("#apod_title").text(result.title);
+        // }
+        // }); 
+    </script>
+  </div>
+
+  <div class="card-block" id="footer"> 
+    <p>Featured by Revature & Compliments of NASA <br />
+      Copyright &copy; 2020
+      &nbsp;</p>
+  </div> 
+</body> 
+</html>

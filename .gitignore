@@ -1,0 +1,5 @@
+/.metadata/
+bower/
+.idea
+target
+*.iml

@@ -1,0 +1,50 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+	<display-name>Archetype Created Web Application</display-name>
+
+	<context-param> <!-- grabbed in MasterServlet -->
+		<param-name>Sports</param-name>
+		<param-value>Steelers-Context-Param</param-value>
+	</context-param>
+
+	<servlet>
+		<servlet-name>MasterServlet</servlet-name>
+		<display-name>MasterServlet</display-name>
+		<description>Servlet desc. by Apache Tomcat 8.5, Maven</description>
+		<servlet-class>servnew.MasterServlet</servlet-class>
+
+		<init-param> <!-- grabbed in MasterServlet -->
+			<param-name>Pokemon</param-name>
+			<param-value>Metapod-MasterServlet</param-value>
+
+		</init-param>
+	</servlet>
+
+	<servlet>
+		<servlet-name>SubServlet</servlet-name>
+		<display-name>SubServlet</display-name>
+		<description></description>
+		<servlet-class>servnew.SubServlet</servlet-class>
+		
+		
+		<init-param> <!-- grabbed in MasterServlet -->
+			<param-name>Pokemon</param-name>
+			<param-value>Charizard-SubServlet</param-value>
+
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MasterServlet</servlet-name>
+		<!-- <url-pattern>/MasterServlet</url-pattern> how request made to servlet -->
+		<!-- <url-pattern>/Tomcat</url-pattern> -->
+		<!-- <url-pattern>/MasterServlet</url-pattern>  -->		
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SubServlet</servlet-name>
+		<url-pattern>/SubServlet</url-pattern>
+	</servlet-mapping>
+</web-app>
