@@ -76,7 +76,7 @@ public class UserDaoImpl implements UserDao {
 		try {
 			String sql = "SELECT * FROM requsertable WHERE username = ?";
 			PreparedStatement ps = conn.prepareStatement(sql);
-			ps.setString(1, getString(username));
+			ps.setString(1, username);
 			ResultSet rs = ps.executeQuery();
 
 			while (rs.next())
@@ -88,17 +88,15 @@ public class UserDaoImpl implements UserDao {
 				rs.getString("password"),  
 				rs.getString("email"));
 			}
+
+			System.out.println("returning (username)");
+		
 	}		catch (Exception e) {
 		System.out.println("SQL issue with getting USER: \n"+e);
 	}
 			return null;
 	};
-
-	private String getString(String username) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
+ 
 	@Override
 	public List<User> listUser() {
 //		List<User> userList = new ArrayList<User>();
@@ -121,11 +119,11 @@ public class UserDaoImpl implements UserDao {
 					rs.getString("email")));
 			}
 			System.out.println("SQL is All Good!");
-			return userArr;
+			
 		} catch (SQLException e) {
 			System.out.println("SQL issue with getting All USER:\n "+e);
 		}
-		return null;
+		return userArr;
 	}
 
 	@Override

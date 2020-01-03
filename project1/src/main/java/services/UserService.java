@@ -24,21 +24,22 @@ public class UserService {
 //		return DB.users.get(id);
 		System.out.println("Passing UserService class ...");
 		return userdao.getUser(id); 
+		
 	}  
 	public static User getUser(String username) {
 //		return DB.users.get(username);
-		System.out.println("Passing UserService class ...");
+		System.out.println("Passing UserService (uname) ...");
 		return userdao.getUser(username);
 		
 	} 
 	public static  List<User> listUser() {  
-		System.out.println("Passing UserService class ...");
-		return userdao.listUser();
 //		List<User> userList = new ArrayList<User>();
 //		Set<Integer> keys = DB.users.keySet();
 //		for(Integer k: keys)
 //			userList.add(DB.users.get(k));
 //		return userList;
+		System.out.println("Passing UserService class ...");
+		return userdao.listUser();
 	}
 	
 

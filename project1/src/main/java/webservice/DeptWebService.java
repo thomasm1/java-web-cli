@@ -13,6 +13,27 @@ import services.DeptService;
 	
 public class DeptWebService {
 
+
+	public static void addDept(HttpServletRequest request, HttpServletResponse response) {
+
+		int deptId = Integer.parseInt(request.getParameter("id"));
+		int deptHeadId = Integer.parseInt(request.getParameter("deptHeadId"));
+		String deptName = request.getParameter("deptName"); 
+		
+		// add db using these fields
+		Dept d = new Dept(deptId, deptHeadId, deptName);
+		System.out.println(d);
+
+		// Call DeptService to add it.
+		DeptService.addDept(d);
+ 
+		try {
+			response.getWriter().append("Successfully added data input: " + request.getContextPath());
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}  
+	}
+
 	public static void getDept(HttpServletRequest request, HttpServletResponse response) {
 		int id = Integer.parseInt(request.getParameter("id"));
 		System.out.println("id: " + id);
@@ -41,27 +62,6 @@ public class DeptWebService {
 			}	
 		}
 	}
-
-	public static void addDept(HttpServletRequest request, HttpServletResponse response) {
-
-		int deptId = Integer.parseInt(request.getParameter("id"));
-		int deptHeadId = Integer.parseInt(request.getParameter("deptHeadId"));
-		String deptName = request.getParameter("deptName"); 
-		
-		// add db using these fields
-		Dept d = new Dept(deptId, deptHeadId, deptName);
-		System.out.println(d);
-
-		// Call DeptService to add it.
-		DeptService.addDept(d);
- 
-		try {
-			response.getWriter().append("Successfully added data input: " + request.getContextPath());
-		} catch (IOException e1) {
-			e1.printStackTrace();
-		}  
-	}
-
 	public static void listDept(HttpServletRequest request, HttpServletResponse response) {
 		List<Dept> d = DeptService.listDept(); 
 		System.out.println(d);

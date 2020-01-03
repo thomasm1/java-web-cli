@@ -10,6 +10,7 @@ public interface RequestDao {
 	public Request getReq(int id); 
 //	public Request getReq(String username); 
 	public List<Request> listReq(); 
+	public List<Request> listReq(int id); 
 //	public boolean updateReq(Request change);
 	public boolean deleteReq(String username);
 }

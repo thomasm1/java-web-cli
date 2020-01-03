@@ -52,24 +52,29 @@
   <link rel="shortcut favicon"  href="favicon.ico"  /> 
 
 </head>
-<body  >
-	<nav class="navbar navbar-default"> 
-		<ul class="nav navbar-nav ">
-		<li>	
-		<a href="#" class="navbar-brand center"><em>Project-1</em>
-		</a>
-	</li>  
-			<li><a href="/project1/index.html">HOME</a></li>
-			<li class="active"><a href="/project1/viewer.html">VIEWER</a></li> 
-			<li><a href="/project1/request.html">NEW REQUEST</a></li> 
-		</ul>
+<body onload="sessionInfo()">
+    <nav class="navbar navbar-default">
+        <ul class="nav navbar-nav">
+            <li> <a href="#" class="navbar-brand center"><em>Project-1</em>
+                </a>
+            </li>
+            <li><a href="/project1/index.html">HOME</a></li>
+            <li  class="active"><a href="/project1/viewer.html">VIEWER</a></li>
+            <li><a href="/project1/request.html">NEW REQUEST</a>
+            </li >
+        </ul>
 
-		<ul class="nav navbar-nav navbar-right log">
-			<li><a href="/project1/login.html">Sign Out</a></li>
-		</ul> 
-	</nav> 
+        <ul class="nav navbar-nav navbar-right userdata">
+            <li class="user navright">
+          <span>User</span> <span class="id" id="headerId"></span><br />
+            <span>ID</span> <span  class="id" id="userId"></span><br />
+            <span>Dept</span> <span class="id" id="userDept"></span><br />
+            <span>Super</span> <span  class="id" id="userSuper"></span><br />
+             <span> <a class="logout"  onclick="logout()"  href="/project1/login.html">Sign Out</a></li></span>  
+ </ul>
+    </nav>
 <div class="container"> 
-   <h3>TABLE VIEWER</h3>  
+   <h3>MANAGEMENT VIEWER</h3>  
    	<div class="detail">
   <button class="btn btn-primary" onclick="getTask()">Get Task by Reference ID </button>     
    <input placeholder="search id # ..."  min="0" size="10px" id="taskId" type="number">  
@@ -100,7 +105,27 @@
         </tr>  
     </table>   
 
-    </div> <!-- end of div.table  -->
+    </div> <!-- end of div.table-->
+    <!-- 
+    <table class="table table-striped">
+		<caption>Your Todos are</caption>
+		<thead>
+			<th>Description</th>
+			<th>Category</th>
+			<th>Actions</th>
+		</thead>
+		<tbody>
+			<c:forEach items="${todos}" var="todo">
+				<tr>
+					<td>${todo.name}</td>
+					<td>${todo.category}</td>
+					<td>&nbsp;&nbsp;<a class="btn btn-danger"
+						href="/delete-todo.do?todo=${todo.name}&category=${todo.category}">Delete</a></td>
+				</tr>
+			</c:forEach>
+		</tbody>
+	</table> -->
+	
     </div> <!-- end of container -->
     <footer class="footer"> 
    <div>
@@ -109,6 +134,7 @@
    </div>
 </footer>
 </body>
+    <script src="proj1js.js"></script>
 <script>  
 	// GET BY ID
     let getTask = function () {   
@@ -265,7 +291,7 @@
 				}
 		 	}
         }
-        xhttp.open("GET", "http://localhost:8090/project1/listRequest.do", true); 
+        xhttp.open("GET", "http://localhost:8090/project1/listRequest.do?=88888", true); 
         xhttp.send(); 
 	}	 
 </script> 

@@ -1,8 +1,11 @@
 package webservice;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
 
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -45,14 +48,42 @@ public class UserWebService {
 			e1.printStackTrace();
 		}
 	}
-	
+ 
 	public static void getUser(HttpServletRequest request, HttpServletResponse response) {
-		int id = Integer.parseInt(request.getParameter("id"));
-		System.out.println("id: " + id);
+//		int id = Integer.parseInt(request.getParameter("id"));
+//		System.out.println("id: " + id);
+		
+		String userName = request.getParameter("username");
+		System.out.println("parameter: "+userName);
+		User u = UserService.getUser(userName);
+		System.out.println("getUser(name):"+u.getUserName());
+		
+		User d = UserService.getUser(u.getUserId());
+		System.out.println("getUser(name):"+d.getUserId());
+		 
+		String dbUser = d.getUserName();
+		int dbId = d.getUserId();
+		int dbSuper = d.getSuperId();
+		int dbDept = d.getDeptId();
+		System.out.println(dbUser+"..getting userInfo:" ); 
 
-		User d = UserService.getUser(id);
-		System.out.println(d);
+		HttpSession sess = request.getSession();   
+		sess.setAttribute("sessionId", sess.getId());
+		sess.setAttribute("username", dbUser);  
+		sess.setAttribute("userid", dbId);  
+		sess.setAttribute("usersuper", dbSuper); 
+		sess.setAttribute("userdept", dbDept); 
 
+		Cookie sessUser = new Cookie("sessUser", dbUser);
+		Cookie sessId = new Cookie("sessId", Integer.toString(dbId));
+		Cookie sessSuper = new Cookie("sessSuper", Integer.toString(dbSuper));
+		Cookie sessDept = new Cookie("sessDept", Integer.toString(dbDept));
+		response.setContentType("text/html"); 
+		response.addCookie(sessId);
+		response.addCookie(sessUser);
+		response.addCookie(sessSuper);
+		response.addCookie(sessDept);
+ 
 		ObjectMapper om = new ObjectMapper();
 		if (d != null) {
 			try {
@@ -64,26 +95,31 @@ public class UserWebService {
 				e1.printStackTrace();
 			} // ("Served at: ").append(request.getContextPath());
 
-		} else {
-			try {
-				String notFound = "Oops, couldn't find that ID";
-				response.getWriter().append(notFound);
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		}
+		}  
 	}
 
 //	int userId, int deptId, int superId, String userName, String password, String email  
 
 	public static void listUser(HttpServletRequest request, HttpServletResponse response) {
-		List<User> d = UserService.listUser();
+		
+		List<User> d = UserService.listUser(); 
+		
+//		    RequestDispatcher rd = request.getRequestDispatcher("/project1/index.html");
+//			try {
+//				rd.forward(request, response);
+//				response.sendRedirect("/project1/index.html");
+//				
+//			} catch (ServletException | IOException e) { 
+//				e.printStackTrace();
+//			} 
+		///
 		System.out.println(d);
 
 		ObjectMapper om = new ObjectMapper();
 		try {
 			String userJSON = om.writeValueAsString(d);
 //			response.getWriter().append("\n\n\n Welcome to Subservlet. You are accessing .do File");
+			
 			response.getWriter().append(userJSON);
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block

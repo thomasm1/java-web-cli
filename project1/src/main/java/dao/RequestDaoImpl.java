@@ -39,7 +39,7 @@ public class RequestDaoImpl implements RequestDao {
 			cs.setString(9, u.getReqGradePass());
 			cs.setString(10, Double.toString(u.getReqAmt()));
 			cs.setString(11, Integer.toString(u.getReqStage()));
-			System.out.println("success to request!: " );
+			System.out.println("success to request!: reqId#"+u.getReqId());
 			cs.execute();
 			return true;
 
@@ -131,7 +131,7 @@ public class RequestDaoImpl implements RequestDao {
 						rs.getString("reqGradeType"),  
 						rs.getString("reqGradePass"), 
 						rs.getDouble("reqAmt"), 
-						rs.getInt("reqStage"))); 
+						rs.getInt("stage"))); 
 			}
 			System.out.println("SQL is All Good!");
 			return reqArr;
@@ -164,6 +164,36 @@ public class RequestDaoImpl implements RequestDao {
 //	}
 
 	@Override
+	public List<Request> listReq(int id) {
+		String sql = "SELECT * FROM reqtable WHERE userid="+id;
+		List<Request> reqArr = new ArrayList<Request>();
+		System.out.println(sql);
+		try {
+			PreparedStatement ps = conn.prepareStatement(sql);
+			// preparedStatements are safe from SQL injection & sanitize inputs
+			ResultSet rs = ps.executeQuery();
+			while (rs.next()) {
+				reqArr.add(new Request(rs.getInt("reqid"),
+						rs.getInt("userid"), 
+						rs.getString("reqName"), 
+						rs.getString("reqType"),  
+						rs.getString("reqDesc"),  
+						rs.getString("reqJustify"),
+						rs.getString("reqDatetime"), 
+						rs.getString("reqPlace"),  
+						rs.getString("reqGradeType"),  
+						rs.getString("reqGradePass"), 
+						rs.getDouble("reqAmt"), 
+						rs.getInt("stage"))); 
+			}
+			System.out.println(" WHERE userid= SQL is All Good !");
+			return reqArr;
+		} catch (SQLException e) {
+			System.out.println("SQL issue with getting All REQUESTS WHERE userid=:\n "+e);
+		}
+		return null;
+	}
+	@Override
 	public boolean deleteReq(String req) {
 //		DB.users.remove(req);
 //		String sql = "DELETE usertable WHERE username = ?";
@@ -184,5 +214,6 @@ public class RequestDaoImpl implements RequestDao {
 //		}
 		return false;
 	}
+
 
 }

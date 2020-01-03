@@ -36,5 +36,9 @@ public class RequestService {
 //			requestList.add(DB.requests.get(k));
 //		return requestList;
 	}
-	
+
+	public static  List<Request> listReq(int id) {  
+		System.out.println("Passing ReqService class ...");
+		return reqdao.listReq(id); 
+	}
 }

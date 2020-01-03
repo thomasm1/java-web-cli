@@ -19,12 +19,15 @@
 		</a>
 	</li>   
 		</ul> 
-	<ul class="nav navbar-nav navbar-right log">
-	 <li><a href="/project1/register.html">REGISTER</a></li> 
+        <ul class="nav navbar-nav navbar-right userdata">
+            <li class=" navright register">
+           <span>
+            <a class="logout"  href="/project1/register.html">REGISTER</a>
+            </span>
+            </li> 
 		</ul> 
 	</nav> 
-   <div class="container">
-   
+   <div class="container"> 
    <h3>MEMBER PORTAL</h3>  
       <div id="info">
    
@@ -34,10 +37,10 @@
     <input id="username" type="text" name="username" />
     <h4 id="text">PASSWORD</h4>
     <input id="password" type="text"  name="password" />
+<div class="spinner" id="spinner"></div>
     <hr> 
-       <button  class="btn btn-primary" onclick="login()">LOGIN </button>
- <!--   <input class="btn btn-primary" type="submit" value="SUBMIT" />
-    	</form> -->
+       <button  class="btn btn-primary" onclick="login()">LOGIN </button> 
+      
     	</div>  
     </div> 
 <footer class="footer"> 
@@ -48,63 +51,9 @@
 </footer>
     
     </body>
+    <script src="proj1js.js"></script>
 <script>
-
-
-    let login = function () { 
-
-        let u = document.getElementById("username");
-        let username;  // just declare
-        username = u.value; // overwrite
-
-        let p = document.getElementById("password");
-        let password;
-        password = p.value;
-
-        let xhttp = new XMLHttpRequest();
-
-        xhttp.onreadystatechange = function () {
-            if (this.readyState == 4 && this.status == 200) { 
-                console.log("readyState: " + this.readyState + ", status: " + this.status);
-            }
-        }
-        xhttp.open("POST", "http://localhost:8090/project1/login.do", true);
-        xhttp.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-        xhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-
-        xhttp.send( "username=" + username + "&password=" + password);
-        console.log(" submitted by: *" + username + ", password *" + password);
-		redirect(username);
-
-    }   
-    let redirect = function(username) { 
-		  let attemptUser = getCookie("attemptUser");
-		  let updateSID = getCookie("updateSID");
-		  let validUser = getCookie("validUser");  
-		  if ((validUser == "validated")) { // && (username == attemptUser)
-		   console.log(" logged in as "+username+", valid " + validUser);
-		   window.location.href="/project1/index.html";
-		  } else {
-		    alert("please try again! attempt by user "+username+", valid " + validUser); 
-		    window.location.href="/project1/login.html";
-		  }  
-		}
- 	
-    let getCookie = function(cname) {
-		  var name = cname + "=";
-		  var decodedCookie = decodeURIComponent(document.cookie);
-		  var ca = decodedCookie.split(';');
-		  for(var i = 0; i <ca.length; i++) {
-		    var c = ca[i];
-		    while (c.charAt(0) == ' ') {
-		      c = c.substring(1);
-		    }
-		    if (c.indexOf(name) == 0) {
-		      return c.substring(name.length, c.length);
-		    }
-		  }
-		  return "";
-		}
+ 
 </script>
 
 	<script src="webjars/jquery/1.9.1/jquery.min.js"></script>
