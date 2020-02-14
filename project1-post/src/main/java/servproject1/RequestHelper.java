@@ -1,4 +1,4 @@
-package servnew;
+package servproject1;
 //import java.time.LocalDateTime;
 import java.io.IOException;
 //import java.io.PrintWriter; 
@@ -67,14 +67,29 @@ public class RequestHelper {
 			RequestWebService.addRequest(request, response);
 			break;
 		} 
-
+// Get Request details - takes param   [reqId] 
 		case "/project1/getRequest.do": {
+		try {
 			RequestWebService.getRequest(request, response);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
 			break;
 		}
+// takes parameter    [userId]
 // Collect user's requests (and pending)
 		case "/project1/listRequest.do": {
 			RequestWebService.listRequest(request, response);
+			break;
+		} 
+// takes parameter    [ (stage, reqUpdateId, supervisorId, text)] 
+// Collect user's requests (and pending)
+		case "/project1/updateRequest.do": {
+		try {
+			RequestWebService.updateReq(request, response);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
 			break;
 		} 
 		case "/project1/addTask.do": {

@@ -11,6 +11,8 @@ public interface RequestDao {
 //	public Request getReq(String username); 
 	public List<Request> listReq(); 
 	public List<Request> listReq(int id); 
-//	public boolean updateReq(Request change);
-	public boolean deleteReq(String username);
+	public boolean updateReq(Request change);
+//	public boolean deleteReq(String username);
+//	public boolean deleteReq(Request change);
+	boolean deleteReq(int id);
 }

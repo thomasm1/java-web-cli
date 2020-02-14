@@ -1,11 +1,11 @@
 package services;
 
-import java.util.ArrayList;
+//import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
+//import java.util.Set;
 
 import dao.RequestDao;
-import dao.RequestDaoImpl; 
+import dao.RequestDaoImpl;
 //import db.DB;
 import models.Request; 
 
@@ -21,7 +21,7 @@ public class RequestService {
 	
 	public static Request getReq(int id) {
 //		return DB.requests.get(id);
-		System.out.println("Passing reqService class ...");
+		System.out.println("Passing reqService with id ..."+id);
 		return reqdao.getReq(id); 
 	} 
 	
@@ -41,4 +41,12 @@ public class RequestService {
 		System.out.println("Passing ReqService class ...");
 		return reqdao.listReq(id); 
 	}
+	public static boolean updateReq(Request change) {
+		System.out.println("Passing ReqService UPDATE...");
+		return reqdao.updateReq(change);
+	}
+//	public static boolean deleteReq(Request change) {
+//		System.out.println("Passing ReqService UPDATE...");
+//		return reqdao.deleteReq(change);
+//	}
 }

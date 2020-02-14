@@ -1,4 +1,4 @@
-package servnew;
+package servproject1;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -15,12 +15,12 @@ public class RequestLoginHelper {
 		// on a different layer of our application
 		// to process the request.
 
-		HttpSession sess = request.getSession();
-		System.out.println("Session ID: " + sess.getId());
-	
-		sess.setMaxInactiveInterval(3600); 
-		System.out.println("RequestHelperLogin Login: " + sess.getAttribute("user"));
- 
+//		HttpSession sess = request.getSession();
+//		System.out.println("Session ID: " + sess.getId());
+//	
+//		sess.setMaxInactiveInterval(3600); 
+//		System.out.println("RequestHelperLogin Login: " + sess.getAttribute("user"));
+// 
 
 	}
 }

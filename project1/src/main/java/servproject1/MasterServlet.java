@@ -1,4 +1,4 @@
-package servnew;
+package servproject1;
 
 import java.io.IOException;
 
@@ -18,14 +18,15 @@ public class MasterServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-//		setAccessControlHeaders(response);
+		
+		setAccessControlHeaders(response);
 //		PrintWriter writer = response.getWriter();
 //		writer.write("test response from myServlet");
 		HttpSession sess = request.getSession();
 		sess.setMaxInactiveInterval(3600); 
-		sess.setAttribute("m-owner", "{'username', 'tom'},{'ordernum','222'}"); 
+//		sess.setAttribute("m-owner", "{'username', 'tom'},{'ordernum','222'}"); 
 		System.out.println("MasterServlet: " + sess.getAttribute("m-owner"));
-		
+		 
 		RequestHelper.process(request, response);
 	}
 
@@ -35,16 +36,16 @@ public class MasterServlet extends HttpServlet {
 		doGet(request, response);
 	}
 
-//	// for Preflight
-//	@Override
-//	protected void doOptions(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//		setAccessControlHeaders(resp);
-//		resp.setStatus(HttpServletResponse.SC_OK);
-//	}
+	// for Preflight
+	@Override
+	protected void doOptions(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		setAccessControlHeaders(resp);
+		resp.setStatus(HttpServletResponse.SC_OK);
+	}
 //
-//	private void setAccessControlHeaders(HttpServletResponse resp) {
-//		resp.setHeader("Access-Control-Allow-Origin", "http://localhost:8090");
-//		resp.setHeader("Access-Control-Allow-Methods", "GET");
-//	}
+	private void setAccessControlHeaders(HttpServletResponse resp) {
+		resp.setHeader("Access-Control-Allow-Origin", "*");
+		resp.setHeader("Access-Control-Allow-Methods", "GET, PUT, POST, HEAD, OPTIONS");
+	}
 
 }

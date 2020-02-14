@@ -1,4 +1,4 @@
-package servnew;
+package servproject1;
 
 import java.io.IOException;
 

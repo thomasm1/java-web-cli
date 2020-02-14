@@ -5,238 +5,287 @@
 <%@ include file="../common/footer.jspf"%>
  -->
 <!DOCTYPE html>
-<head>
-    <title>Project-1</title>
-<style>
 
-</style>
-<link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css"
-	rel="stylesheet" />
-    <link  href="proj1style.css" rel="stylesheet" /> 
-  <link  href="/favicon.ico" rel="shortcut favicon"  /> 
-  <link  href="/project1/favicon.ico" rel="shortcut favicon"  /> 
-  <link  href="favicon.ico" rel="shortcut favicon" type="text/html"  /> 
-  <!-- /project1/src/main/webapp/favicon.ico
+<head>
+	<title>Requests-1</title>
+	<style>
+		footer.footer {
+			width: 100%;
+			position: absolute;
+			bottom: 0;
+		}
+
+		#messages {
+			display: none;
+			color: green;
+		}
+
+		#bal {
+			display: block;
+			float: left;
+			color: green;
+			transform: translateY(15px);
+		}
+	</style>
+	<link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="proj1style.css" rel="stylesheet" />
+	<link href="/favicon.ico" rel="shortcut favicon" />
+	<link href="/project1/favicon.ico" rel="shortcut favicon" />
+	<link href="favicon.ico" rel="shortcut favicon" type="text/html" />
+	<!-- /project1/src/main/webapp/favicon.ico
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
    -->
 </head>
-<body onload="sessionInfo();listRequest()"><!-- getUser(); -->
-    <nav class="navbar navbar-default">
-        <ul class="nav navbar-nav navleft">
-            <li> <a href="#" class="navbar-brand center"><em>Project-1</em>
-                </a>  </li>
-            <li class="active"> <a href="/project1/index.html">HOME</a></li>
-            <li><a href="/project1/viewer.html">VIEWER</a></li>
-            <li><a href="/project1/request.html">NEW REQUEST</a>  </li >
-        </ul>
 
-        <ul class="nav navbar-nav navbar-right userdata">
-            <li class="user navright">
-            <span>User</span> <span class="id" id="headerId"></span><br />
-            <span>ID</span> <span  class="id" id="userId"></span><br />
-            <span>Dept</span> <span class="id" id="userDept"></span><br /> 
-            <span>Super</span> <span  class="id" id="userSuper"></span><br />
+<body onload="sessionInfo();listRequest(true, 0)">
+	<!-- getUser(); -->
+	<nav class="navbar navbar-default">
+		<ul class="nav navbar-nav "> 
+			<li  id="left-header"  > 
+			<span id="role"> 
+		 <h3><strong><em>TRMS</em></strong></h3>
+    </span>
+			<span  id="bal"></span>
+			</li>   
  
-            <span  ><a class="logout" onclick="logout()" href="/project1/login.html">Sign Out</a></span>
-        </li>
-        </ul>
-    </nav>
-   <div class="container">    
-    <h3>DASHBOARD</h3> 
-   <div id="info" class="row">
-   
-<div class="col col-xs-8">
-<h4>Pending Requests</h4>
-<hr>
-    <table id="table">  
-        <tr>
-            <td>| </td>
-            <td id="dname">|</td>
-        </tr> 
-        <tr>
-            <td>| </td>
-            <td id="dtype">|</td>
-        </tr>
-        <tr>
-            <td>| </td>
-            <td id="did">|</td>
-        </tr>  
-    </table>   
-   
-</div>
-<div class="col col-xs-4">
-<div style="height:200px;"> 
-<input placeholder="search id # ..."  min="100" size="10px" id="taskId" type="number">  
-<button class="btn btn-primary" onclick="getRequestk()"> Request Details </button>     
-<hr>
-<div id="get-request">
-</div>
-</div>
-     <h4 id="text">Task Number</h4>
-    <input id="taskId" type="number">
-    <h4 id="text">curr UserId</h4>
-    <input id="currUserId" type="number">
-    <h4 id="text">time Stamp</h4>
-    <input id="timeStamp" type="text"> 
-    <button class="btn btn-primary" onclick="addTask()">Add</button>
- 
- </div> 
+			<li class="active"><a href="/project1/index.html">REQUESTS</a></li>
+			<li><a href="/project1/admin.html">STATUS</a></li>
 
-    </div> 
-    </div><!-- end of container -->
-    
-    <footer class="footer"> 
-   <div>
-    <p>Project 1 Footer - Revature<br />
-    <small>Copyright &copy; 2020 &nbsp;</small></p>
-   </div>
-</footer>
+		</ul>
+
+		<ul class="nav navbar-nav navbar-right userdata">
+			<li class="user navright">
+				<div class="">
+					<a href="/project1/request.html" class="pull-left">
+						<button class="btn btn-primary logout ">&nbsp;&nbsp;Reimburse
+							Me&nbsp;&nbsp;</button>&nbsp;&nbsp;&nbsp;</a>
+					<a onclick="logout()" href="/project1/login.html" class="pull-right">
+						<button class="btn btn-default logout">&nbsp;&nbsp;Sign Out&nbsp;&nbsp;</button>&nbsp;&nbsp;
+					</a>
+				</div>
+
+				<span>User</span><span class="id" id="headerId"> </span><br />
+				<span>ID</span> <span class="id" id="userId"></span><br />
+				<span>Dept</span> <span class="id" id="userDept"></span><br />
+				<span>Super</span> <span class="id" id="userSuper"></span><br />
+				</div>
+			</li>
+		</ul>
+		<span class="header-title">
+			<h3>MY REQUESTS</h3>
+		</span>
+	</nav>
+	<div class="container">
+		<div id="info" class="row">
+
+			<div class="col col-xs-8">
+				<hr>
+				<table id="table">
+
+
+				</table>
+
+			</div>
+			<div class="col col-xs-4">
+
+				<div>
+					<button class="btn btn-primary" onclick="listRequest(true,0)"> Show All my Requests </button>
+					<hr>
+				</div>
+
+				<div>
+					<input placeholder="search by request id # ..." min="100" size="10px" id="reqId" type="number">
+					<button class="btn btn-primary" style="padding:3px 35px;margin-top:5px" onclick="getRequest()">
+						Request Details </button>
+					<hr>
+					<input placeholder="request id # ..." min="100" size="10px" id="autoreqid" type="number">
+					<input placeholder="supervisor id #" min="100" size="10px" id="superreqid" type="number">
+					<button class="btn btn-primary"
+						title="Set a 1-week timer and if Super has not replied, your request is forwarded a step to Dept. Head"
+						style="padding:3px 15px;margin-top:5px" onclick="setSuperTimeout()">&nbsp;&nbsp;&nbsp;Enroll in
+						Fast-Track!&nbsp;&nbsp;&nbsp;
+					</button>
+					<div id="messages"></div>
+					<hr>
+				</div>
+				<h4 id="text">To: UserId</h4>
+				<input id="currUserId" type="number">
+				<h4 id="text">Request Number</h4>
+				<input id="reqId" type="text">
+				<h4 id="text">Message</h4>
+				<input id="currDocs" type="number">
+				<button class="btn btn-primary" onclick="addTask()">Send</button>
+
+			</div>
+
+		</div>
+	</div><!-- end of container -->
+
+	<footer class="footer">
+		<div>
+			<p>Requests 1 - Revature<br />
+				<small>Copyright &copy; 2020 &nbsp;</small></p>
+		</div>
+	</footer>
+	<div id="benco1">
+		<div id="benco2">
+			<div class="detail"></div>
+		</div>
+	</div>
 </body>
-    <script src="proj1js.js"></script>
-<script> 
-// GET BY ID
-let getTask = function () {   
-	let reqId = document.getElementById("reqId").value;
-	console.log("reqId "+reqId)
-	let xhttp = new XMLHttpRequest();
-    
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            let d = JSON.parse(this.responseText);
-            console.log("name: "+d.currUserId+ " length: "+this.responseText ); 
-           if (d.taskId != null)  { 
-            	let infoContent  = `  
-            	<div class="row">
-            	<div class="col col-xs-6">
-            	    <h6>Time Stamp: ${d.timeStamp}</h6> 
-                	<h6>Reference Id: ${d.taskId}</h6>
-              		<h6>Request ID: #${d.reqId}</h6>
-				 	<h6>Updated by User: #${d.currUserId}</h6> 
-				 	<h6>currDocs: ${d.currDocs}</h6> 
-				 	<h6>update Req Type: ${d.updateReqType}</h6> 
-			 	</div>
-            	<div class="col col-xs-6">
-                	<h6>update Reason: ${d.updateReason}</h6> 
-				 	<h6>update Amount Granted: ${d.updateAmt}</h6> 
-				 	<h6>update Reason: ${d.updateReason}</h6> 
-				 	<h6>update Grade Pass: ${d.updateGradePass}</h6> 
-				 	<h6>update Stage: ${d.updateStage}</h6> 
+<script>
 
-			 	</div>
-            	</div>
-              `;
-              
-             	let info =  document.getElementById("get-request"); 
-	            info.innerHTML = infoContent;
-            } else { 
-                 	let infoContent = ` Oops! Id #${reqId} not found, try another!`; 
-                     let info =  document.getElementById("get-request"); 
-                     info.innerHTML = infoContent;
-                 } 
-            }
+	//SET TIMEOUT FOR 2 MINS 120 * 1000      120.000
+	//(USUALLY 1 WEEK) == 604800 * 1000 = 604.800.000
+	let setSuperTimeout = function () {
+		let messages = document.getElementById("messages");
+		messages.style.display = "block";
+		messages.innerHTML = "Auto-Approve sent, check status in one week.";
+		console.log(messages);
+		setTimeout(function () {
+			let stage = 2;
+			let autoreqid = document.getElementById("autoreqid");
+			let reqUpdateId = ""; // declare & erase subsequent
+			reqUpdateId = autoreqid.value; // append
 
-        } 
-    xhttp.open("GET", "http://localhost:8090/project1/getTask.do?taskId=" + taskId, true); 
-    xhttp.send(); 
-    }  
+			let superreqid = document.getElementById("superreqid");
+			let supervisorId;  // just declare
+			supervisorId = superreqid.value; // overwrite
+
+			let text = "AUTO APPROVED (Supervisor)";
+			messages.style.display = "none";
+			updateReq(stage, reqUpdateId, supervisorId, text);
+		}, 20000)
+	}
+	// ALL MY USER DATA
+	let uId;
+
+	// GET BY REQUEST BY REQID
+	let reqId;
 
 
-let listRequest = function() {
-	 
-	let xhttp = new XMLHttpRequest(); 
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 &&  this.status ==   200 ) {  
-			
-        	let d = JSON.parse(this.responseText);
-    		console.log(d);
-    		if ( d =="undefined" || d.length==0 || !d  || d == null ) {
-				document.getElementById("table").innerHTML += `
-				<h6>No Reimbursements have been requested.</h6>
-				`;
-			} else {
-			 document.getElementById("table").innerHTML =""; //erase empty list
-		
-				for (i = 0; i<d.length; i++) {
-					document.getElementById("table").innerHTML += `
+	let getRequest = function () {
+
+		reqId = document.getElementById("reqId").value;
+		console.log("reqId " + reqId)
+		let xhttp = new XMLHttpRequest();
+
+		xhttp.onreadystatechange = function () {
+			if (this.readyState == 4 && this.status == 200) {
+				d = JSON.parse(this.responseText);
+				console.log("name: " + d.reqId + " length: " + this.responseText);
+
+
+				if (d.reqId != null) {
+
+					let status = statusCase(d.stage);
+					let adjusted = adjustedReq(d.reqAmt, d.reqType);
+
+					document.getElementById("table").innerHTML = `
+              		<h4>Details for Request #${d.reqId}</h4>
 				        <tr>
-			            <td><strong>#${d[i].reqId}</strong>&nbsp;   &nbsp; Request:</td>
-			            <td >${d[i].reqName}</td>
+			            <td><strong>#${d.reqId}</strong>&nbsp;   &nbsp; Request:</td>
+			            <td >${d.reqName}</td>
 				        </tr> 
-				        <tr>
-			            <td>&nbsp;&nbsp;  &nbsp;  &nbsp; &nbsp; Request Type:</td>
-			            <td>${d[i].reqType}</td>
-				        </tr>
-				        <tr>
+					    <tr>
 				        <td>&nbsp;&nbsp;  &nbsp;  &nbsp; &nbsp;Date Requested:</td>
-				        <td>${d[i].reqDatetime}</td>
+				        <td>${d.reqDatetime}</td> 	 
 			        	</tr>
-				        <tr>
-			            <td>&nbsp;&nbsp;  &nbsp;  &nbsp; &nbsp; Request Amount:</td>
-			            <td>${d[i].reqAmt}</td>
-			        	</tr>
-		        	   	<tr>
-			            <td>&nbsp;&nbsp;  &nbsp;  &nbsp; &nbsp; Adjusted Amount:</td>
-			            <td>${d[i].reqAmt}</td>
-			        	</tr>
-		        		<tr>
-			            <td>&nbsp;&nbsp;  &nbsp;  &nbsp; &nbsp; Status:</td>
-			            <td>${d[i].stage}</td>
-			        	</tr>
+				        	<tr >
+					        <td>&nbsp;&nbsp;  &nbsp;  &nbsp; &nbsp;Current Date:</td>
+					        <td>${d.reqDatetime}</td> 	 
+				        	</tr>
+
+				        	<tr>
+				            <td>&nbsp;&nbsp;  &nbsp;  &nbsp; &nbsp; Status:</td>
+				            <td><em>${status}</em></td>
+				        	</tr>  
+				            <tr>
+				            <td>&nbsp;&nbsp;  &nbsp;  &nbsp; &nbsp; Request Amount:</td>
+				            <td>$${d.reqAmt}  </td>
+				        	</tr>
+				        	
+				        	<tr>
+				            <td>&nbsp;&nbsp;  &nbsp;  &nbsp; &nbsp; Adjusted Amount:</td>
+				            <td><em>$${adjusted}</em></td>
+				        	</tr> 
+				        	<tr>
+				            <td>&nbsp;&nbsp;  &nbsp;  &nbsp; &nbsp; Evaluation Type:</td>
+				            <td>${d.reqGradeType}  </td>
+				        	</tr>
+			        	   	<tr>
+				            <td>&nbsp;&nbsp;  &nbsp;  &nbsp; &nbsp; Passing Cutoff:</td>
+				            <td>${d.reqGradePass}</td>
+				        	</tr> 
+				        	<tr>
+				            <td>&nbsp;&nbsp;  &nbsp;  &nbsp; &nbsp; Event Type:</td>
+				            <td>${d.reqType}</td>
+					        </tr>
+				         
+					        <tr>
+				            <td>&nbsp;&nbsp;  &nbsp;  &nbsp; &nbsp; Event Justification:</td>
+				            <td>${d.reqJustify}  </td>
+				        	</tr>
+			        	   	<tr>
+				            <td>&nbsp;&nbsp;  &nbsp;  &nbsp; &nbsp; Event Description:</td>
+				            <td>${d.reqDesc}</td>
+				        	</tr>
 				        <hr>				      
-					`; 
-					}
-			} 
-	 	}
-    }
-    let uid = getCookie("userid"); 
-    xhttp.open("GET", "http://localhost:8090/project1/listRequest.do?userId="+uid, true); 
-    xhttp.send(); 
-     
-    /* DETAILS: 
-    <tr>
-    <td>&nbsp;&nbsp;  &nbsp;  &nbsp; &nbsp; Request Description:</td>
-    <td>${d[i].reqDesc}</td>
-	</tr>
-	*/
-}	 
+					`;
+					console.log("just sent for" + d.reqId)
 
-    let addTask = function () {
-        let d = document.getElementById("taskId");
-        let taskId = ""; // declare & erase subsequent
-        taskId += d.value; // append
+				} else {
+					let infoContent = ` Oops! This request Id #${reqId} not found, try another!`;
+					let info = document.getElementById("table");
+					info.innerHTML = infoContent;
+				}
+			}
 
-        let dn = document.getElementById("currUserId");
-        let currUserId;  // just declare
-        currUserId = dn.value; // overwrite
+		}
+		xhttp.open("GET", "http://localhost:8090/project1/getRequest.do?reqId=" + reqId, true);
+		xhttp.setRequestHeader('Access-Control-Allow-Origin', '*');  // http://mydomain.com
+		//   xhttp.setRequestHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, OPTIONS');
+		xhttp.send();
+	}
 
-        let dt = document.getElementById("timeStamp");
-        let timeStamp;
-        timeStamp = dt.value;
+	let addTask = function () {
+		let d = document.getElementById("taskId");
+		let taskId = ""; // declare & erase subsequent
+		taskId += d.value; // append
 
-        let xhttp = new XMLHttpRequest();
+		let dn = document.getElementById("currUserId");
+		let currUserId;  // just declare
+		currUserId = dn.value; // overwrite
 
-        xhttp.onreadystatechange = function () {
-            if (this.readyState == 4 && this.status == 200) {
+		let dt = document.getElementById("timeStamp");
+		let timeStamp;
+		timeStamp = dt.value;
 
-                console.log("readyState: " + this.readyState + ", status: " + this.status);
-            }
-        }
+		let xhttp = new XMLHttpRequest();
 
-        xhttp.open("POST", "http://localhost:8090/project1/addTask.do", true);
+		xhttp.onreadystatechange = function () {
+			if (this.readyState == 4 && this.status == 200) {
 
-        xhttp.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-        xhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+				console.log("readyState: " + this.readyState + ", status: " + this.status);
+			}
+		}
+		xhttp.open("POST", "http://localhost:8090/project1/addTask.do", true);
 
-        xhttp.send("taskId=" + taskId + "&currUserId=" + currUserId + "&timeStamp=" + timeStamp);
-        console.log("Great, you sent taskId: #" + taskId + " submitted by: *" + currUserId + " on date: *" + timeStamp);
+		xhttp.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+		xhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+		xhttp.setRequestHeader('Access-Control-Allow-Origin', '*');  // http://mydomain.com
+		//   xhttp.setRequestHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, OPTIONS');
 
+		xhttp.send("taskId=" + taskId + "&currUserId=" + currUserId + "&timeStamp=" + timeStamp);
+		console.log("Great, you sent taskId: #" + taskId + " submitted by: *" + currUserId + " on date: *" + timeStamp);
 
-    }
+	}
 
 </script>
+<script src="proj1js.js"></script>
 
-	<script src="webjars/jquery/1.9.1/jquery.min.js"></script>
-	<script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="webjars/jquery/1.9.1/jquery.min.js"></script>
+<script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 </HTML>
