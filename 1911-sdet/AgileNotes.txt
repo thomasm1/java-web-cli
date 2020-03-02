@@ -1,0 +1,61 @@
+Agile
+
+Sprints
+Deliverables
+Continuous Integration
+Adaptive, Flexible
+
+Agile Methodology -
+
+1. Working software over documentation
+2. Do not rigidly adhere to plans
+	- You need to be *Agile* and adapt
+	to change.
+3. Customer collaboration over contracts
+	- (opposite: Waterfall)
+
+Sprints - A given amount of time to complete
+	a given set of tasks. (1-4 week time period)
+
+
+
+Scrum 
+
+Product Owner - representative of the
+	stakeholders. This is not the
+	client/customer
+
+
+Scrum Master - part coach/timekeeper/
+	cheerleader/technical lead
+
+Scrum Team - Software Developers
+
+
+Sprint Timeline
+
+Sprint Prospective - PO will set goals for
+	the sprint.
+	- Scrum Master will assign duties.
+	- Rack and Stack - Product Backlog
+	- ~ 1/4 Day * weeks in Sprint
+
+Daily Standups - 10-15 minutes MAX. 
+	- Lead by the Scrum Master
+
+
+Sprint Retrospective - Sprint Review
+	- What got done, what needs to get
+	done, lessons learned.
+
+
+*
+ - Your goal is that the products at the end
+of every Sprint.
+
+- MVP - Minimum Viable Product
+	- barebones
+	- at the end of every Sprint.
+*
+
+

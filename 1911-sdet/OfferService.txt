@@ -1,0 +1,54 @@
+
+
+Offer o = OfferService.getOffer(o_id);
+
+Car c = CarService.getCar(o.getC_Id());
+
+User u = UserService.getUser(o.getU_Id());
+
+
+System.out.print("Id: " + o.getO_Id() + "; Customer: " + u.getUsername() +
+	"; Make: " + c.getMake() + "; Model: " + c.getModel());
+
+
+
+
+----------------------------------
+
+static User loggedInUser = currentUser...
+
+List<Offer> offers = OfferService.getAllOffers();
+String printStatement = "";
+
+for(Offer o : offers) {
+
+	if(o.getUsername() == loggedInUSer.getUsername()) {
+		printStatement += "\nId: " + o.getO_Id() + "; Customer: " + u.getUsername() +
+	"; Make: " + c.getMake() + "; Model: " + c.getModel();
+	
+	}
+
+}
+System.out.println(printStatement);
+
+------------------------
+
+for(Offer o : offers) {
+
+	if(o.getUsername() == loggedInUSer.getUsername()) {
+		System.out.println("Id: " + o.getO_Id() + "; Customer: " + u.getUsername() +
+	"; Make: " + c.getMake() + "; Model: " + c.getModel());
+	
+	}
+
+}
+
+user interaction. GO BACK.
+
+
+Load the customer menu again.
+
+
+
+
+

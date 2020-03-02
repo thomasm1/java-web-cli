@@ -1,0 +1,53 @@
+
+SQL Day 1
+
+
+RDBMS - Relational Database Management System
+	- software designed to manage a database
+	- Examples: Oracle SQL, PostGreSQL, MySQL, mariaDB, Amazon Aurora,
+	Windows SQL Server, etc....
+
+Database - A collection of object designed to hold information
+
+Relational Database - A database which holds information in tables related to each other.
+
+table - composed of columns (fields) which hold attributes and rows (records) which model
+an instance.
+
+SQL - Structured Query Language
+	- used for managing data held inside an RDBMS
+	- Freedom to choose how much code is executed at a time.
+
+Schema - group of DB related objects
+
+Cursor - result set of a SQL query
+
+View - Virtual table based on the result of a query.
+
+
+SQL has 5 sublanguages
+
+
+	- Data Definition Language (DDL)
+		- Defines the rules and structures of a database
+		- Create, Alter, Rename, Drop, Truncate
+
+	- Data Manipulation Language (DML)
+		- Adds, removes, or edits data in the database
+		- Insert, Delete, Update
+
+	- Data Query Language (DQL)
+		- For reading information
+		- Select
+
+	- Data Control Language (DCL)
+		- For granting permissions to users
+		- Grant, Revoke
+
+	- Transaction Control Language (TCL)
+		- For generating transactions
+		- Commit, rollback, savepoint
+
+
+
+

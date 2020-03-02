@@ -1,0 +1,99 @@
+0000000000000000000000000000000000000000 d16f50995167ed4d4d37bd776634e7ce3b7f9048 thomas maestas <thomasm1.maestas@gmail.com> 1580239218 -0500	clone: from https://github.com/revaturelabs/rideshare-user-service.git
+d16f50995167ed4d4d37bd776634e7ce3b7f9048 d16f50995167ed4d4d37bd776634e7ce3b7f9048 thomas maestas <thomasm1.maestas@gmail.com> 1580321665 -0500	checkout: moving from dev to database
+d16f50995167ed4d4d37bd776634e7ce3b7f9048 d16f50995167ed4d4d37bd776634e7ce3b7f9048 thomas maestas <thomasm1.maestas@gmail.com> 1580321708 -0500	checkout: moving from database to data-thomas
+d16f50995167ed4d4d37bd776634e7ce3b7f9048 d16f50995167ed4d4d37bd776634e7ce3b7f9048 thomas maestas <thomasm1.maestas@gmail.com> 1580325430 -0500	checkout: moving from data-thomas to validation
+d16f50995167ed4d4d37bd776634e7ce3b7f9048 d16f50995167ed4d4d37bd776634e7ce3b7f9048 thomas maestas <thomasm1.maestas@gmail.com> 1580325640 -0500	checkout: moving from validation to search-algorith
+d16f50995167ed4d4d37bd776634e7ce3b7f9048 c5bd299df9e8021590e04b423e08c249d9d7c9b7 thomas maestas <thomasm1.maestas@gmail.com> 1580329825 -0500	commit: connected to postgreSQL AWS-RDS; connect JPA postgreSQL driver
+c5bd299df9e8021590e04b423e08c249d9d7c9b7 c5bd299df9e8021590e04b423e08c249d9d7c9b7 thomas maestas <thomasm1.maestas@gmail.com> 1580398344 -0500	checkout: moving from search-algorith to embedded-data
+c5bd299df9e8021590e04b423e08c249d9d7c9b7 c5bd299df9e8021590e04b423e08c249d9d7c9b7 thomas maestas <thomasm1.maestas@gmail.com> 1580411663 -0500	reset: moving to HEAD
+c5bd299df9e8021590e04b423e08c249d9d7c9b7 c5bd299df9e8021590e04b423e08c249d9d7c9b7 thomas maestas <thomasm1.maestas@gmail.com> 1580421010 -0500	reset: moving to HEAD
+c5bd299df9e8021590e04b423e08c249d9d7c9b7 c5bd299df9e8021590e04b423e08c249d9d7c9b7 thomas maestas <thomasm1.maestas@gmail.com> 1580422027 -0500	reset: moving to HEAD
+c5bd299df9e8021590e04b423e08c249d9d7c9b7 c5bd299df9e8021590e04b423e08c249d9d7c9b7 thomas maestas <thomasm1.maestas@gmail.com> 1580422095 -0500	checkout: moving from embedded-data to search-algorith
+c5bd299df9e8021590e04b423e08c249d9d7c9b7 d16f50995167ed4d4d37bd776634e7ce3b7f9048 thomas maestas <thomasm1.maestas@gmail.com> 1580422292 -0500	checkout: moving from search-algorith to dev
+d16f50995167ed4d4d37bd776634e7ce3b7f9048 d16f50995167ed4d4d37bd776634e7ce3b7f9048 thomas maestas <thomasm1.maestas@gmail.com> 1580424471 -0500	checkout: moving from dev to dev-search-thomas
+d16f50995167ed4d4d37bd776634e7ce3b7f9048 68b120b84ba93272a6aaaccf1a29d99240fba146 thomas maestas <thomasm1.maestas@gmail.com> 1580515254 -0500	commit: data for embedded h2; reader/parser bean; distanceAPI bean
+68b120b84ba93272a6aaaccf1a29d99240fba146 779cb885d12edd2d70dcc1c536f1d92082f01d81 thomas maestas <thomasm1.maestas@gmail.com> 1580771221 -0500	commit: connected JSON data ->controller->maps API->sorted output
+779cb885d12edd2d70dcc1c536f1d92082f01d81 ef92ceaf1e92847cd13b688348c14d674a706143 thomas maestas <thomasm1.maestas@gmail.com> 1580788580 -0500	commit: DistanceMatrix error-handling for invalid addresses
+ef92ceaf1e92847cd13b688348c14d674a706143 92fa2773125f8cc8970078a03ed687499a1c3b5a thomas maestas <thomasm1.maestas@gmail.com> 1580824428 -0500	checkout: moving from dev-search-thomas to master
+92fa2773125f8cc8970078a03ed687499a1c3b5a 92fa2773125f8cc8970078a03ed687499a1c3b5a thomas maestas <thomasm1.maestas@gmail.com> 1580824435 -0500	checkout: moving from master to prod
+92fa2773125f8cc8970078a03ed687499a1c3b5a ef92ceaf1e92847cd13b688348c14d674a706143 thomas maestas <thomasm1.maestas@gmail.com> 1580824798 -0500	checkout: moving from prod to dev-search-thomas
+ef92ceaf1e92847cd13b688348c14d674a706143 41cc5e4b1350458b316e9bcccd4e74ff94240090 thomas maestas <thomasm1.maestas@gmail.com> 1580825096 -0500	commit (amend): distanceMatrix, data from users_addresses.json
+41cc5e4b1350458b316e9bcccd4e74ff94240090 92fa2773125f8cc8970078a03ed687499a1c3b5a thomas maestas <thomasm1.maestas@gmail.com> 1580825359 -0500	checkout: moving from dev-search-thomas to master
+92fa2773125f8cc8970078a03ed687499a1c3b5a 92fa2773125f8cc8970078a03ed687499a1c3b5a thomas maestas <thomasm1.maestas@gmail.com> 1580825377 -0500	checkout: moving from master to prod
+92fa2773125f8cc8970078a03ed687499a1c3b5a 41cc5e4b1350458b316e9bcccd4e74ff94240090 thomas maestas <thomasm1.maestas@gmail.com> 1580825406 -0500	checkout: moving from prod to dev-search-thomas
+41cc5e4b1350458b316e9bcccd4e74ff94240090 92fa2773125f8cc8970078a03ed687499a1c3b5a thomas maestas <thomasm1.maestas@gmail.com> 1580825438 -0500	checkout: moving from dev-search-thomas to prod
+92fa2773125f8cc8970078a03ed687499a1c3b5a 41cc5e4b1350458b316e9bcccd4e74ff94240090 thomas maestas <thomasm1.maestas@gmail.com> 1580825489 -0500	merge dev-search-thomas: Fast-forward
+41cc5e4b1350458b316e9bcccd4e74ff94240090 41cc5e4b1350458b316e9bcccd4e74ff94240090 thomas maestas <thomasm1.maestas@gmail.com> 1580825528 -0500	checkout: moving from prod to dev-search-thomas
+41cc5e4b1350458b316e9bcccd4e74ff94240090 41cc5e4b1350458b316e9bcccd4e74ff94240090 thomas maestas <thomasm1.maestas@gmail.com> 1580829577 -0500	checkout: moving from dev-search-thomas to dev-search-local
+41cc5e4b1350458b316e9bcccd4e74ff94240090 3a37f0dda486d234096b83f64e072519d0073148 thomas maestas <thomasm1.maestas@gmail.com> 1580829635 -0500	commit: DistanceMatrix working from addresses.json, without button
+3a37f0dda486d234096b83f64e072519d0073148 41cc5e4b1350458b316e9bcccd4e74ff94240090 thomas maestas <thomasm1.maestas@gmail.com> 1580829650 -0500	checkout: moving from dev-search-local to dev-search-thomas
+41cc5e4b1350458b316e9bcccd4e74ff94240090 3a37f0dda486d234096b83f64e072519d0073148 thomas maestas <thomasm1.maestas@gmail.com> 1580829766 -0500	checkout: moving from dev-search-thomas to dev-search-local
+3a37f0dda486d234096b83f64e072519d0073148 3a37f0dda486d234096b83f64e072519d0073148 thomas maestas <thomasm1.maestas@gmail.com> 1580829799 -0500	reset: moving to HEAD
+3a37f0dda486d234096b83f64e072519d0073148 41cc5e4b1350458b316e9bcccd4e74ff94240090 thomas maestas <thomasm1.maestas@gmail.com> 1580830015 -0500	checkout: moving from dev-search-local to dev-search-thomas
+41cc5e4b1350458b316e9bcccd4e74ff94240090 60692c43c7ff29b8a39d34a819a4c2fb53a9dcef thomas maestas <thomasm1.maestas@gmail.com> 1580830812 -0500	commit: sorting unchanged. Controller pre-starting on api methods
+60692c43c7ff29b8a39d34a819a4c2fb53a9dcef 8467b5c8c0511b1e8c74aadf55d014e00bba2b04 thomas maestas <thomasm1.maestas@gmail.com> 1580833730 -0500	checkout: moving from dev-search-thomas to daniel
+8467b5c8c0511b1e8c74aadf55d014e00bba2b04 d16f50995167ed4d4d37bd776634e7ce3b7f9048 thomas maestas <thomasm1.maestas@gmail.com> 1580833800 -0500	checkout: moving from daniel to validation
+d16f50995167ed4d4d37bd776634e7ce3b7f9048 3db0a065b358a5b04bf830af8affac1fe2b707f6 thomas maestas <thomasm1.maestas@gmail.com> 1580833807 -0500	pull: Fast-forward
+3db0a065b358a5b04bf830af8affac1fe2b707f6 8467b5c8c0511b1e8c74aadf55d014e00bba2b04 thomas maestas <thomasm1.maestas@gmail.com> 1580833905 -0500	checkout: moving from validation to daniel
+8467b5c8c0511b1e8c74aadf55d014e00bba2b04 60692c43c7ff29b8a39d34a819a4c2fb53a9dcef thomas maestas <thomasm1.maestas@gmail.com> 1580833947 -0500	checkout: moving from daniel to dev-search-thomas
+60692c43c7ff29b8a39d34a819a4c2fb53a9dcef 92fa2773125f8cc8970078a03ed687499a1c3b5a thomas maestas <thomasm1.maestas@gmail.com> 1580833975 -0500	checkout: moving from dev-search-thomas to master
+92fa2773125f8cc8970078a03ed687499a1c3b5a 60692c43c7ff29b8a39d34a819a4c2fb53a9dcef thomas maestas <thomasm1.maestas@gmail.com> 1580834028 -0500	checkout: moving from master to dev-search-thomas
+60692c43c7ff29b8a39d34a819a4c2fb53a9dcef 8467b5c8c0511b1e8c74aadf55d014e00bba2b04 thomas maestas <thomasm1.maestas@gmail.com> 1580834354 -0500	checkout: moving from dev-search-thomas to daniel
+8467b5c8c0511b1e8c74aadf55d014e00bba2b04 d4e0c56d8850f0b5cc6fecd8e5451a56a4dc210e thomas maestas <thomasm1.maestas@gmail.com> 1580834362 -0500	pull: Fast-forward
+d4e0c56d8850f0b5cc6fecd8e5451a56a4dc210e 60692c43c7ff29b8a39d34a819a4c2fb53a9dcef thomas maestas <thomasm1.maestas@gmail.com> 1580835762 -0500	checkout: moving from daniel to dev-search-thomas
+60692c43c7ff29b8a39d34a819a4c2fb53a9dcef 5adb4a8b1d15dbc3dd2cabfb9e125e6360aec9b9 thomas maestas <thomasm1.maestas@gmail.com> 1580836193 -0500	commit: added distanceMatrix, JSON reader-manipulator, thomas merge with Daniel' & Davis' branch; no errors
+5adb4a8b1d15dbc3dd2cabfb9e125e6360aec9b9 5adb4a8b1d15dbc3dd2cabfb9e125e6360aec9b9 thomas maestas <thomasm1.maestas@gmail.com> 1580836544 -0500	checkout: moving from dev-search-thomas to search-algorithm
+5adb4a8b1d15dbc3dd2cabfb9e125e6360aec9b9 d61e407fe1ce170a47d130d367f9a206142304eb thomas maestas <thomasm1.maestas@gmail.com> 1580836739 -0500	commit (amend): added distanceMatrix, JSON reader-manipulator, thomas merge with Daniel' & Davis' branch; no errors
+d61e407fe1ce170a47d130d367f9a206142304eb 5adb4a8b1d15dbc3dd2cabfb9e125e6360aec9b9 thomas maestas <thomasm1.maestas@gmail.com> 1580839311 -0500	checkout: moving from search-algorithm to dev-search-thomas
+5adb4a8b1d15dbc3dd2cabfb9e125e6360aec9b9 c4fd5504c75eb705a53d2913ae446dd5691c78e1 thomas maestas <thomasm1.maestas@gmail.com> 1580841018 -0500	checkout: moving from dev-search-thomas to searchAlgorithmShef
+c4fd5504c75eb705a53d2913ae446dd5691c78e1 5adb4a8b1d15dbc3dd2cabfb9e125e6360aec9b9 thomas maestas <thomasm1.maestas@gmail.com> 1580841044 -0500	checkout: moving from searchAlgorithmShef to dev-search-thomas
+5adb4a8b1d15dbc3dd2cabfb9e125e6360aec9b9 a46fcccd0dfbef6b6d131ee717d82705eb71a00a thomas maestas <thomasm1.maestas@gmail.com> 1580842501 -0500	commit (amend): added distanceMatrix, JSON reader-manipulator, thomas merge with Daniel' & Davis' branch; no errors
+a46fcccd0dfbef6b6d131ee717d82705eb71a00a c4fd5504c75eb705a53d2913ae446dd5691c78e1 thomas maestas <thomasm1.maestas@gmail.com> 1580842525 -0500	checkout: moving from dev-search-thomas to searchAlgorithmShef
+c4fd5504c75eb705a53d2913ae446dd5691c78e1 a46fcccd0dfbef6b6d131ee717d82705eb71a00a thomas maestas <thomasm1.maestas@gmail.com> 1580842635 -0500	checkout: moving from searchAlgorithmShef to dev-search-thomas
+a46fcccd0dfbef6b6d131ee717d82705eb71a00a a46fcccd0dfbef6b6d131ee717d82705eb71a00a thomas maestas <thomasm1.maestas@gmail.com> 1580845604 -0500	reset: moving to HEAD
+a46fcccd0dfbef6b6d131ee717d82705eb71a00a 43bab27e58efa4e9b10fb7fd32befad5330d66a7 thomas maestas <thomasm1.maestas@gmail.com> 1580845619 -0500	commit (amend): added distanceMatrix, JSON reader-manipulator, thomas merge with Daniel' & Davis' branch; no errors
+43bab27e58efa4e9b10fb7fd32befad5330d66a7 6ee92fa4f350b6daef444ec4f4dbeffe95585a22 thomas maestas <thomasm1.maestas@gmail.com> 1580846614 -0500	commit (merge): merge Shef's APIs
+6ee92fa4f350b6daef444ec4f4dbeffe95585a22 6ee92fa4f350b6daef444ec4f4dbeffe95585a22 thomas maestas <thomasm1.maestas@gmail.com> 1580847591 -0500	reset: moving to HEAD
+6ee92fa4f350b6daef444ec4f4dbeffe95585a22 6ee92fa4f350b6daef444ec4f4dbeffe95585a22 thomas maestas <thomasm1.maestas@gmail.com> 1580847670 -0500	reset: moving to HEAD
+6ee92fa4f350b6daef444ec4f4dbeffe95585a22 43bab27e58efa4e9b10fb7fd32befad5330d66a7 thomas maestas <thomasm1.maestas@gmail.com> 1580847700 -0500	reset: moving to 43bab27e58efa4e9b
+43bab27e58efa4e9b10fb7fd32befad5330d66a7 dc68722a730d15ac9c29422abbe5b59935bbe2c6 thomas maestas <thomasm1.maestas@gmail.com> 1580849698 -0500	commit: api-key removed from codebase, placed into folder 'api', file 'distanceapi.txt'; tested, works fine
+dc68722a730d15ac9c29422abbe5b59935bbe2c6 798ed98f4f2ec54c21bb97b349158e633bbfb9e5 thomas maestas <thomasm1.maestas@gmail.com> 1580850491 -0500	commit: api-key removed from codebase, now in outside folder 'api', file 'distanceapi.txt'; tested, works fine; new key in slack
+798ed98f4f2ec54c21bb97b349158e633bbfb9e5 dc68722a730d15ac9c29422abbe5b59935bbe2c6 thomas maestas <thomasm1.maestas@gmail.com> 1580850613 -0500	reset: moving to dc68722a730d15ac9c2
+dc68722a730d15ac9c29422abbe5b59935bbe2c6 c9099e69afc7151155766e51b4fbd69555b2b5fc thomas maestas <thomasm1.maestas@gmail.com> 1580850699 -0500	commit (amend): api-key removed from codebase, now in outside folder 'api', file 'distanceapi.txt'; tested, works fine; new key in slack
+c9099e69afc7151155766e51b4fbd69555b2b5fc ee42a90f6ef89130cefc285d1ebf37b744af53aa thomas maestas <thomasm1.maestas@gmail.com> 1580934303 -0500	commit: api method calls moved out of main into DevDemo; mapping started for id with distance/locations; login now returns apiKey, soon to use encrypt
+ee42a90f6ef89130cefc285d1ebf37b744af53aa c99c8cf765f7330d4e738544035b04abf558762c thomas maestas <thomasm1.maestas@gmail.com> 1580948613 -0500	commit: finished api controller: 8080/findMyPeeps?id=&address returns 5 closest distances
+c99c8cf765f7330d4e738544035b04abf558762c 269065d0f85d93f730d644c63ae5afa54b154a25 thomas maestas <thomasm1.maestas@gmail.com> 1580948703 -0500	commit (amend): 1.DevDemo class done; 2.)api controller: 8080/findMyPeeps?id=&address returns 5 closest distances
+269065d0f85d93f730d644c63ae5afa54b154a25 a59efa23a8f3250d39f90d051e6194f32a80de48 thomas maestas <thomasm1.maestas@gmail.com> 1580963050 -0500	commit: clean-up of distanceMatrix
+a59efa23a8f3250d39f90d051e6194f32a80de48 a59efa23a8f3250d39f90d051e6194f32a80de48 thomas maestas <thomasm1.maestas@gmail.com> 1580963073 -0500	checkout: moving from dev-search-thomas to dev-temp
+a59efa23a8f3250d39f90d051e6194f32a80de48 a59efa23a8f3250d39f90d051e6194f32a80de48 thomas maestas <thomasm1.maestas@gmail.com> 1581086252 -0500	checkout: moving from dev-temp to dev-search-thomas
+a59efa23a8f3250d39f90d051e6194f32a80de48 a59efa23a8f3250d39f90d051e6194f32a80de48 thomas maestas <thomasm1.maestas@gmail.com> 1581086414 -0500	checkout: moving from dev-search-thomas to local
+a59efa23a8f3250d39f90d051e6194f32a80de48 a59efa23a8f3250d39f90d051e6194f32a80de48 thomas maestas <thomasm1.maestas@gmail.com> 1581087069 -0500	checkout: moving from local to dev-search-thomas
+a59efa23a8f3250d39f90d051e6194f32a80de48 a1e42133da6589166e0eb3b8e11b692986930fec thomas maestas <thomasm1.maestas@gmail.com> 1581088943 -0500	commit: remove devDemo, still works as before
+a1e42133da6589166e0eb3b8e11b692986930fec 3db0a065b358a5b04bf830af8affac1fe2b707f6 thomas maestas <thomasm1.maestas@gmail.com> 1581088986 -0500	checkout: moving from dev-search-thomas to validation
+3db0a065b358a5b04bf830af8affac1fe2b707f6 0cd2d7605fda615d2f610de507aadb534e666cf7 thomas maestas <thomasm1.maestas@gmail.com> 1581088991 -0500	pull: Fast-forward
+0cd2d7605fda615d2f610de507aadb534e666cf7 fea5ec9af575e04ad2072a444997ebe29d51b495 thomas maestas <thomasm1.maestas@gmail.com> 1581089074 -0500	commit: temp addresses
+fea5ec9af575e04ad2072a444997ebe29d51b495 a1e42133da6589166e0eb3b8e11b692986930fec thomas maestas <thomasm1.maestas@gmail.com> 1581089117 -0500	checkout: moving from validation to dev-search-thomas
+a1e42133da6589166e0eb3b8e11b692986930fec a1e42133da6589166e0eb3b8e11b692986930fec thomas maestas <thomasm1.maestas@gmail.com> 1581090634 -0500	reset: moving to HEAD
+a1e42133da6589166e0eb3b8e11b692986930fec fea5ec9af575e04ad2072a444997ebe29d51b495 thomas maestas <thomasm1.maestas@gmail.com> 1581090806 -0500	checkout: moving from dev-search-thomas to validation
+fea5ec9af575e04ad2072a444997ebe29d51b495 005ac3d3545c733ca8bf2dbd8b057db6078b4ed2 thomas maestas <thomasm1.maestas@gmail.com> 1581090844 -0500	pull: Merge made by the 'recursive' strategy.
+005ac3d3545c733ca8bf2dbd8b057db6078b4ed2 a1e42133da6589166e0eb3b8e11b692986930fec thomas maestas <thomasm1.maestas@gmail.com> 1581091341 -0500	checkout: moving from validation to dev-search-thomas
+a1e42133da6589166e0eb3b8e11b692986930fec e04385d622417e7ea3b7feb150d3b8abff58fad3 thomas maestas <thomasm1.maestas@gmail.com> 1581092600 -0500	checkout: moving from dev-search-thomas to validation2shef
+e04385d622417e7ea3b7feb150d3b8abff58fad3 e04385d622417e7ea3b7feb150d3b8abff58fad3 thomas maestas <thomasm1.maestas@gmail.com> 1581092649 -0500	reset: moving to HEAD
+e04385d622417e7ea3b7feb150d3b8abff58fad3 e04385d622417e7ea3b7feb150d3b8abff58fad3 thomas maestas <thomasm1.maestas@gmail.com> 1581092673 -0500	reset: moving to HEAD
+e04385d622417e7ea3b7feb150d3b8abff58fad3 e04385d622417e7ea3b7feb150d3b8abff58fad3 thomas maestas <thomasm1.maestas@gmail.com> 1581092706 -0500	reset: moving to HEAD
+e04385d622417e7ea3b7feb150d3b8abff58fad3 a88a13472e9565cacf9a4b40cbdad9884ec44a4c thomas maestas <thomasm1.maestas@gmail.com> 1581093047 -0500	commit (merge): merge shef thomas branches
+a88a13472e9565cacf9a4b40cbdad9884ec44a4c a88a13472e9565cacf9a4b40cbdad9884ec44a4c thomas maestas <thomasm1.maestas@gmail.com> 1581105658 -0500	checkout: moving from validation2shef to airCode
+a88a13472e9565cacf9a4b40cbdad9884ec44a4c 419d05b3cfd501ca05f9aacb85d9613ffac1c663 thomas maestas <thomasm1.maestas@gmail.com> 1581105884 -0500	commit: issues
+419d05b3cfd501ca05f9aacb85d9613ffac1c663 806a6939c90d27d9ed42215aebf574ff59a2e823 thomas maestas <thomasm1.maestas@gmail.com> 1581105926 -0500	commit (amend): does not read in data from user repository
+806a6939c90d27d9ed42215aebf574ff59a2e823 a1e42133da6589166e0eb3b8e11b692986930fec thomas maestas <thomasm1.maestas@gmail.com> 1581106488 -0500	checkout: moving from airCode to dev-search-thomas
+a1e42133da6589166e0eb3b8e11b692986930fec a88a13472e9565cacf9a4b40cbdad9884ec44a4c thomas maestas <thomasm1.maestas@gmail.com> 1581106884 -0500	merge validation2shef: Fast-forward
+a88a13472e9565cacf9a4b40cbdad9884ec44a4c cbf08376a54bb18f75012be777e6f8326b51d6c6 thomas maestas <thomasm1.maestas@gmail.com> 1581107428 -0500	commit: works. (need user API) Postman: http://localhost:8080/findMyPeeps?address=400 koehler, morgantown, 26505
+cbf08376a54bb18f75012be777e6f8326b51d6c6 0b7abdb4bb2b098aaacd7c3a5ea0794c4fd16e0a thomas maestas <thomasm1.maestas@gmail.com> 1581107493 -0500	commit (amend): merge w/shefValidation works. (need user API) Postman: http://localhost:8080/findMyPeeps?address=400 koehler, morgantown, 26505
+0b7abdb4bb2b098aaacd7c3a5ea0794c4fd16e0a d61e407fe1ce170a47d130d367f9a206142304eb thomas maestas <thomasm1.maestas@gmail.com> 1581262891 -0500	checkout: moving from dev-search-thomas to search-algorithm
+d61e407fe1ce170a47d130d367f9a206142304eb fc3d3f6ee308823ce60926aae779e03495ffffad thomas maestas <thomasm1.maestas@gmail.com> 1581263428 -0500	commit (merge): merge 2/09
+fc3d3f6ee308823ce60926aae779e03495ffffad b935aa7d539cb699d78f07135161e3229c6621e7 thomas maestas <thomasm1.maestas@gmail.com> 1581263498 -0500	commit (amend): merge 2/09
+b935aa7d539cb699d78f07135161e3229c6621e7 de2fbed7970b479013a2ab045bbfbc281973d1df thomas maestas <thomasm1.maestas@gmail.com> 1581263642 -0500	commit (amend): merge 2/09
+de2fbed7970b479013a2ab045bbfbc281973d1df 0b7abdb4bb2b098aaacd7c3a5ea0794c4fd16e0a thomas maestas <thomasm1.maestas@gmail.com> 1581263650 -0500	checkout: moving from search-algorithm to dev-search-thomas
+0b7abdb4bb2b098aaacd7c3a5ea0794c4fd16e0a 8295d8edf508a528eb66cb847b70c74fc928740d thomas maestas <thomasm1.maestas@gmail.com> 1581436237 -0500	commit: junk
+8295d8edf508a528eb66cb847b70c74fc928740d e6cd8924636fc9cf9aeee0b5f2636de1d54769b4 thomas maestas <thomasm1.maestas@gmail.com> 1581436242 -0500	checkout: moving from dev-search-thomas to bertrick
+e6cd8924636fc9cf9aeee0b5f2636de1d54769b4 f3cd2b8c1cc8fc55b19c21bf6af0828a34d4dbfd thomas maestas <thomasm1.maestas@gmail.com> 1581533656 -0500	pull: Fast-forward

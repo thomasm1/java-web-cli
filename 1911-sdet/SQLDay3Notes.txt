@@ -1,0 +1,80 @@
+
+SQL Day 3
+
+Multiplicities (relations between tables)
+
+	3 Types:
+		- 1-to-1 relationship - pokemon - stats
+		- 1-to-Many relationship - pokemon - trainer
+					 - User - Car
+		- Many-to-Many relationship - pokemon - type
+			- Many to Many relationships should use a Junction Table
+
+
+Entity Relationship Diagram
+	- Data modeling technique that represents the relationship between tables
+	and illustrates the entity framework.
+
+
+-------------------------------------------------
+
+Normalization - Process of reducing redundancy in a database
+(not always desirable)
+
+	1NF - 
+	- All data is atomic
+	- Each record is uniquely identifiable
+
+	2NF -
+	- There are no functional dependencies
+		- This means that no data can be calculated from other data in a table.
+	- Also in 1NF
+
+	3NF -
+	- There are no transistive dependencies
+		- You cannot find a particular value somewhere else in the database.
+	- Also in 2NF
+
+
+----------------------------------------------------
+
+Joins and Unions
+
+
+Joins - Combine two tables HORIZONTALLY based on some type of predicate
+	
+	- ex: - "ON pokemon.p_id = stats.p_id"
+
+	- Left Join
+	- Right Join
+	- Cross Join
+	- Natural Join
+	- Outer Join
+	- Full Outer Join
+	- Inner Join
+	- Theta Join
+
+
+--------------------------------------------------
+
+
+
+Transactions - A logical unit of SQL commands
+
+	** Oracle's transaction SHOULD obey ACID **
+
+
+A - Atomic - all statements in a transaction succeed or none of them do.
+C - Consistent - The database moves from one consistent committed state to another.
+I - Isolated - Concurrent transactions do not cause consistency issues.
+D - Durable - Transactions fail gracefully and do not cause your database to crash
+	or something to happen.
+
+
+
+
+
+
+
+
+

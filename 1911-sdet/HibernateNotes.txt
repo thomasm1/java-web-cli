@@ -1,0 +1,126 @@
+
+Hibernate Notes
+
+
+Why we need to learn Hibernate?
+	- Hibernate is an Object Relational Mapping (ORM) framework for Java.
+	- Object Relation Mapping (ORM) is a programming technique used to convert
+	between incompatible type systems such as Java Objects and Database tables.
+	- Java consists of classes and objects, but we can't store data in object
+	permanently, so we use a relational database.
+	- To access without Hibernate: need to read data from Java Objects,
+	need to write an SQL statement that pull data from the database (forms a ResultSet)
+	and then pull the data into the Objects.
+	
+	- Hibernate uses JDBC under the hood.
+	- Abstraction of JDBC:
+		- We no longer have to write SQL in Java.
+		- We can perform transactions on the database only using Java Objects.
+		- Hibernate methods can be used to map Java classes and fields to database
+		tables and coulumns.
+
+
+Benefits of Hibernate:
+	- Supports persistent database accesses
+	- Provides data query and retrieval facilities
+	- Handles all the low level SQL code
+	- Reduces the JDBC code for interacting with the database
+	- Can use cahcing to make processes faster
+	- Simplifies complex joins
+	- Automatically create tables for you
+
+
+Basic APIs:
+
+	- Configuration class
+		- used to represent the properties of the configuration in Hibernate
+		- Hibernate uses this to read and parse properties required to connect
+		to a database.
+		- Used to create the SessionFactory
+		- Provides two main types of information: Databased connection credentials
+		and class mapping setup.
+
+	- SessionFactory interface
+		- Instance of Session is created using the SessionFactory
+		- A session is a single-threaded, short-lived object representating
+		a conversation between the application and the persistent store.
+		- Session is used to create instances of Transaction, Query, and Criteria
+
+	- Transaction interface
+		- Instance of Transaction is created using the Session Object.
+		- Single-threaded, short-lived objects used by the application to specify
+		atomic units of work.
+
+
+	- *TransactionFactory
+		- Factory for transaction instances
+
+
+Other important interface
+
+	- Query interface:
+		- Object that is used to create a query that will retrieve or store
+		data into the database.
+		- Uses SQL or HQL
+
+	- Criteria interface:
+		- Object that is used to create a query that will retrieve data
+		based on multiple conditions.
+		- Object-Oriented approach; doesn't use a query language.
+		
+
+
+Hibernate Object States:
+
+	- There are 3 different object states in Hibernate. These objects are part
+	of the Hibernate Architecture.
+
+
+	- Transient:
+		- An object is transient if it has been instantiated using the new operator
+		and is not associated with a Hibernate session yet.
+		- Transient instances will be destroyed by the garbage collector if the
+		application does not hold a reference anymore.
+
+	- Persistent:
+		- A persistent object has a representation in the databased and has
+		 an identifier value (id).
+		- It is in the scope of the session.
+		- Hibernate will detect changes made to an object in a persistent state
+		and synchronize the state with the database when the unit of work is complete.
+		- Use methods such as save() or persist() if you want to make a persistent
+		object.
+
+	- Detached
+		- A detached instance is an object that has been persisted, but its session
+		has closed.
+		- The reference to the object is still valid and the detached instance'
+		might even be modified in that state.
+		- A detached instance can be reattached to a new session at a later point
+		in time, making it persistent again.
+
+
+Caching in Hibernate
+
+- Hiberate L1 vs L2 Caching
+	
+	- L1 Caching
+		- Associated with the Session Object
+		- considered to be mandatory
+		- If you use multiple updates to an object, Hibernate
+		will try to delay the actual update to the DB as long as possible
+		to reduce the number of update SQL statements used.
+		- Closing a session causes all L1 caching data to be lost.
+
+	- L2 Caching
+		- Optional caching
+		- Associated with the SessionFactory object
+		- First level cache is always consulted before any attempts
+		are made to locate an object using L2 caching
+		- Can be configured on a per-class basis and per-collection basis
+		and is aminly responsible for caching object across sessions.
+		- A third party cache has to implemented.
+			- JBoss, Ehcache
+
+
+

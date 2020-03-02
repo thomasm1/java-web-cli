@@ -1,8 +1,0 @@
-3
-line line two
-line line three
-line line four
-
-I
-am
-bored.

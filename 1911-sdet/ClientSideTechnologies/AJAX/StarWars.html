@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Star Wars Browser</title>
+</head>
+<body>
+
+    <h1>Star Wars</h1>
+    <button onmouseover="getCharacter()">Get Character</button>
+
+    <table style="border: solid 1px black">
+        <tr>
+            <th>Character Info</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td id="name">NameValue</td>
+        </tr>
+        <tr>
+            <td>Height</td>
+            <td id="height">HeightValue</td>
+        </tr>
+        <tr>
+            <td>Mass</td>
+            <td id="mass">MassValue</td>
+        </tr>
+        <tr>
+            <td>Skin Color</td>
+            <td id="skin_color">SkinColorValue</td>
+        </tr>
+
+    </table>
+
+    <input type="text">
+    <input id="hidden1" type="hidden" value=""></input>
+    
+</body>
+<script>
+
+    function getCharacter() {
+
+        let xhttp = new XMLHttpRequest();
+
+        let randomNum = Math.floor(Math.random() * 87 + 1);
+
+        let url = "https://swapi.co/api/people/" + randomNum + "/?format=json";
+
+
+        xhttp.onreadystatechange = function() {
+            if(this.readyState == 4 && this.status == 200) {
+
+                let character = JSON.parse(this.responseText);
+
+                console.log(character);
+
+                document.getElementById("name").innerHTML = character.name;
+                document.getElementById("height").innerHTML = character.height;
+                document.getElementById("mass").innerHTML = character.mass;
+                document.getElementById("skin_color").innerHTML = character.skin_color;
+
+                document.getElementById("hidden1").value = 'password';
+            }
+        }
+
+        xhttp.open("GET", url, true);
+
+        xhttp.send();
+    }
+
+</script>
+</html>

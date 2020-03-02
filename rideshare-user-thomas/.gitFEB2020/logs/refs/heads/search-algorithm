@@ -1,0 +1,5 @@
+0000000000000000000000000000000000000000 5adb4a8b1d15dbc3dd2cabfb9e125e6360aec9b9 thomas maestas <thomasm1.maestas@gmail.com> 1580836544 -0500	branch: Created from HEAD
+5adb4a8b1d15dbc3dd2cabfb9e125e6360aec9b9 d61e407fe1ce170a47d130d367f9a206142304eb thomas maestas <thomasm1.maestas@gmail.com> 1580836739 -0500	commit (amend): added distanceMatrix, JSON reader-manipulator, thomas merge with Daniel' & Davis' branch; no errors
+d61e407fe1ce170a47d130d367f9a206142304eb fc3d3f6ee308823ce60926aae779e03495ffffad thomas maestas <thomasm1.maestas@gmail.com> 1581263428 -0500	commit (merge): merge 2/09
+fc3d3f6ee308823ce60926aae779e03495ffffad b935aa7d539cb699d78f07135161e3229c6621e7 thomas maestas <thomasm1.maestas@gmail.com> 1581263498 -0500	commit (amend): merge 2/09
+b935aa7d539cb699d78f07135161e3229c6621e7 de2fbed7970b479013a2ab045bbfbc281973d1df thomas maestas <thomasm1.maestas@gmail.com> 1581263642 -0500	commit (amend): merge 2/09

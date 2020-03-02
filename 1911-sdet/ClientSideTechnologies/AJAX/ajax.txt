@@ -1,0 +1,74 @@
+
+AJAX - Asynchronous JavaScript and XML
+
+    - used to update a webpage without refreshing the page.
+    - Creates a smoother user experience
+    
+
+- Asynchronous - Not synchronized
+    - not run immediately
+    - it waits for certain conditions to be met
+    before it executes
+
+    - Process runs in the background
+        - This does not mean that it can run tasks in parallel
+        - It just won't halt your browser while it processes
+
+
+---------------------------
+
+Steps for making an AJAX call:
+
+XMLHttpRequest
+    - the core Object of an AJAX call
+    - supported by 'practically all' modern browsers
+
+
+1. Make an XMLHttpRequest Object
+
+    let xhttp = new XMLHttpRequest();
+
+2. define a function to execute when certain conditions
+are met.
+
+    if(conditions) {
+        code();
+    }
+
+3. Open the Request
+
+    xhttp.open(http method (get, post, put, delete), url, async?)
+
+4. Send the Request
+    xhttp.send();
+
+4.5 Successful Response
+    execute code in step 2.
+
+
+----------------------------------
+
+readyState - gives information on the status of your
+XMLHttpRequest.
+
+0 - Unsent (technically also Unopened)
+1 - Open - called the open() but has not actually sent it yet.
+2 - Headers Received - send() has been called and
+            the headers have been received.
+3 - Loading - Downloading the response from XMLHttpRequest.
+4 - Done (or complete)
+
+- Event listener: onreadystatechange
+
+HTTP Status Codes - these tell you about how your
+request was handled.
+
+100s - information
+200s - Successful calls - 200 OK, 201 Resource created
+300s - Redirects
+400s - Client Side errors (your problem) - 404 Not Found, 401 Unauthorized, 403 Forbidden Access, 451 Unavailable for Legal Reasons, 418 I'm a Teapot 
+500s - Server Side errors (their problem)
+
+we want to check for 200 -> OK 
+
+

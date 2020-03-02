@@ -1,0 +1,39 @@
+DOM - Document Object Model
+
+    - This is the reason JavaScript was created
+    - makes web pages dynamic
+    
+    - It is a way to present an HTML page as a series
+    of connected nodes.
+
+
+Event - 
+    - Event is a user action or something that occurs on
+    the page.
+    - Ex: click, mouseover, load
+
+
+Event listeners / handlers
+    - It will listen for an event to occur on a specific
+    element and it 'fires' a function.
+    - This function is called an action.
+    - This is also a callback function.
+
+
+2 steps to creating an event listener.
+
+    //get the element
+    1. let element = document.getElementById("myId");
+    2. element.addEventListener(event, action, capture?);
+        --element.addEventListener(event, action);
+    
+
+-----------------------------
+
+
+Bubbling - is when an event handler executes from the innermost
+element to the outermost element. This is the default for
+'almost all' browsers.
+
+Capturing - is when an event handler executes from the 
+outermost element to the innermost element.

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Event Listener</title>
+    <style>
+    ::-moz-selection { background-color: yellow;
+   color: black; }
+   ::selection { background-color: yellow;
+   color: black; }
+    </style>
+</head>
+<body>
+    <h1 id="pikachu">Hello I am <span onclick="changePikachu(this)">Pikachu!</span></h1>
+</body>
+<script>
+    let pikachu = document.getElementById("pikachu");
+    // pikachu.addEventListener("click", () => { pikachu.innerHTML = "Secret Attack!" });
+    // pikachu.addEventListener("mouseover", () => { pikachu.innerHTML = "Pika Pii!!"});
+    // pikachu.onmouseout = () => { pikachu.innerHTML = "Hello I am <span>Pikachu!</span>"};
+    
+    function changePikachu(element) {
+        element.style.backgroundColor = "yellow";
+    }
+</script>
+</html>

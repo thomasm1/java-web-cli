@@ -1,0 +1,407 @@
+Software Testing Fundamentals
+
+
+Software Development Lifecycle - SDLC
+
+1. Analysis of the existing system
+	- Identify areas of improvement
+
+2. System requirements are identified
+	- Propose new features
+	- Address existing issues/concerns
+
+3. Proposed system is defined
+	- Overall design is developed
+	- Technology stack is chosen
+
+4. New system is developed
+	- Actual coding/implementation
+
+5. Testing/Integration
+	- Test your new feature(s)
+	- Test for compatability
+
+6. Maintenance/Monitoring
+	- Report area of deficiencies
+	- Use this information to start a new cycle
+
+
+
+
+Software Testing Lifecycle - STLC
+
+1. Planning/Analysis
+	- What needs to be tested?
+	- Is it testable?
+
+2. Design
+	- How are we going to set up our tests?
+	- Is it going to be automatic?
+	- What frameworks?
+
+3. Develop your test cases
+	- write the code for your tests
+	- Unit and Integration Tests
+	- Find the edge cases
+	- Good test cases should not overlap or be redundant
+	- However, they should cover all functionality
+		- Code coverage
+
+4. Choose an environment for your tests
+	- What software/hardware are you using to run your tests?
+
+5. Test Execution
+	- Run your tests
+
+6. Conclusion/Wrap up
+	- Generate a report of the findings from the test execution
+		- 100 tests passed, 3 failed.
+		- What's my code coverage?
+
+
+
+Defect Lifecycle
+
+
+New - Bug detected
+
+Assigned - Assigned to developer
+
+Rejected - Defect is thrown out for various reasons such as: not a defect.
+
+Deferred - Defect is put off for various reasons such as: not important, may be overwritten.
+
+Test/Fixed - Test the cases and attempt to fix.
+
+Reassign - Failed to fix. Might not have been assigned to a developer with the
+appropriate skills
+
+Verified - Other developers or testers will verify the bug is fixed
+
+Closed - Bug is documented as fixed.
+
+
+------------------------------------------------------
+
+Testing Vocab
+
+
+
+Test Case - A set of inputs and conditions and expected results
+
+Test Suite - A group of test cases related to each other (same functionality)
+
+
+
+Test Strategy - Document that sets the standards for the testing process.
+	- Typically company wide - the same for every project
+	- Rules and Responsibilities
+	- Objectives
+	- Scopes
+	- High level
+
+Test Plan - Document that tells us what to test and how and who will do it.
+	- Project Wide
+	- Features to be tested
+	- Testing tehniques
+	- Test environments
+	- Schedule
+	- Low Level
+
+----------------------------------------------
+
+
+Types of Testing
+
+	- White box testing - testing based on the knowledge of the internal code.
+		- applies mostly to low level unit tests.
+
+	- Black box testing - testing an application without knowledge of how it works.
+		- Typically focuses on functionality
+		- Mimics how a user would test it.
+
+
+Functional Testing - Testing to see if a piece of software does what it is supposed to do
+	- Given a set of inputs there are expected outputs.
+
+
+	Unit Testing - Testing of individual software components
+
+	Integration Testing - Testing done to expose deficiencies between code components
+	working together.
+
+	System Testing - Test a complete and integrated software application
+
+	Acceptance Testing - The final complete piece of software is tested to make sure
+	it is ready for deployment.
+		- This is done by a human.
+
+
+	Unit Testing		- White box testing
+		|
+		|
+		V
+	Integration Testing	- white/black box testing - Grey box
+		|
+		|
+		V
+	System Testing		- black box testing
+		|
+		|
+		V
+	Acceptance Testing	- black box testing
+
+
+
+Non-functional Testing - Testing for non-functional aspects of the software
+	- Usability, Performance, Reliability
+
+Usability Testing - Testing if the application is friendly for users to use.
+	- has to be done by a human
+	- Black screen with a small black text box. This could function, but it is
+	unfriendly to use.
+
+Performance Testing - Testing for responsiveness, stability, and efficiency of an app.
+	
+	Load Testing - Testing a system and evaluating its behaviors under heavy use.
+		- Have 10,000 users use the application simultaneously.
+
+	Stress Testing - Testing and evaluating a system's behaviors when pushed beyond
+	what is designed to do.
+		- Check pressure points
+		- Submit 10,000 orders all at once
+
+	Endurance Testing - Testing to see if the application can process and work for a
+	prolonged period of time under heavy use.
+		- Have 10,000 users use the application for 5 days straight.
+
+	Spike Testing - Testing conducted to see how the software deals with a sudden
+	surge of use.
+		- Having no users at first. Logging 10,000 users all of a sudden.
+		- Maybe you have many users logged in, but many are idle or not making
+		requests. Have many users all of a sudden make many requests.
+
+
+Reliability Testing - Testing whether the software can perform failure-free ooperations
+for a specified length of time.
+	- Feature Testing - test that a feature's operations are all executed properly.
+	- Load Testing - Software tends to perform better at first and degrades over time.
+	- Regression Testing - Make sure new bugs haven't been introduced with new code.
+
+-----------------------------------------------------
+
+Risk-Based Testing - Testing principle that prioritizes testing features based on:
+	- Risk of Failure
+	- The importance of the function to be tested
+	- Impact of failure
+
+	- Prioritize and emphasize the suitable tests during test execution
+	- Imporved quality - all critical funcitons are tested
+
+
+
+Regression Testing - incremental testing of software to ensure that new additions
+to the software do not break existing functionality.
+
+
+Testing Automation - Using software to perform manual testing
+	- Cuts testing time down significantly
+	- Tests are repeatable
+	- After hours testing
+	- Increase code coverage*
+
+
+Positive Testing - Testing to see that a certain procedure succeeds
+	- User enters valid data
+
+Negative Testing - Testing to see that a certain procedures fails
+	- User enters invalid data
+
+
+
+Smoke Testing - Running tests just to see if your application is even in a state
+to be tested.
+
+
+-----------------------------------------------
+
+
+Test Driven Development (TDD) - Develop tests (typically unit tests) first, then
+write code to make them pass.
+
+
+Behavior Driven Development (BDD) - 
+	- Expansion of TDD
+	- Develop failing acceptance tests and program code to pass them
+	- Write user stories, turn them into tests, then write code.
+	- We will use Cucumber to accomplish this.
+
+
+Red/Green Testing - Mantra used TDD, where you write tests that fail (RED). Then
+you write code until they pass (GREEN). Then you can write more tests.
+	- Should be incremental. Don't write ALL tests at once.
+
+
+
+
+
+Alpha Testing - Testing an application as to how an end user might use it.
+	- Usually done by internal employees.
+
+Beta Testing - Releasing the software to a limited number of expected users
+who have nop connection to the development.
+
+
+
+
+More Vocab:
+
+Defect/Bug - when the software doesn't behave as intended, often in a detrimental.
+
+
+Severity - How much does the functionality a feature get compromised when it fails.
+
+Priority - How pressing is it that a defect be corrected.
+
+
+
+		    _
+                   / \
+                  /   \
+                 /     \
+                /       \
+               /  Manual \
+              /  UI Tests \
+             /-------------\
+            /   Automated   \
+           /     UI Tests    \
+       	  /-------------------\
+         /      Automated      \
+        /   Integration Tests   \
+       /-------------------------\
+      /         Automated         \
+     /         Unit Tests          \
+     -------------------------------
+
+
+
+----------------------------------------------------
+
+Selenium - A suite of tools aim at automation (used predominantly for testing)
+
+Some of these tools:
+
+Selenium Client API - Support for writing Selenium in many languages
+
+Selenium Remote Control - Server that allows for writing web application tests
+in many languages
+
+Selenium Grid - A server that can test using many machines running in parallel.
+
+Seleneium Webdriver - A serverless way to execute your tests. The heart of modern Selenium.
+Starts a browser and controls it.
+
+You need a different driver for each type of browser you plan to automate.
+
+chromedriver.exe -> Google Chrome
+
+geckodriver.exe -> Mozilla Firefox
+
+----------------------------------------------
+
+POM - Page Object Model
+
+We create a Java class whose fields represent elements in a webpage.
+We use the POM to help organize our code and abstract away getting elements.
+Makes code extensible and easy to read.
+
+
+----------------------------------------------
+
+TestNG- Test Next Generation
+	- is a superset of JUnit
+
+- A unit testing framework
+- We can set priorities to easily determine the order in which our test run.
+- And the ability to run tests in parallel*.
+
+
+
+-----------------------------------------------
+
+Cucumber - is a BDD Framework
+Behavior Driven Development
+
+
+Cucumber Feature File
+
+	Feature: describe the feature or segment of functionality of your application
+	you are testing: High level description of the software feature
+
+	Background: is used to provide context to our software
+	
+	Scenario: defines steps for our tests, uses Cucumber programming language: Gherkin
+
+
+	Gherkin is VERY HIGH LEVEL language, which reads as English.
+	It provides a structure for our code to implement. Gherkin will generate
+	the method signature for our tests. Called Step Implementations.
+
+	Scenario: 
+
+		Given - Some set of preconditions
+		When - Some set of actions
+		Then - Some sort of test/observable outcome
+
+		- You can concatenate any of these with the AND keyword
+
+
+- To write a Cucumber BDD Test
+
+	1. Write a feature file.
+	2. Implement the step implementations created by the feature file.
+	3. Put the step implementationa and feature into a test runner.
+
+
+--------------------------------------------------------
+
+Protractor
+
+end to end testing
+- e2e testing automation framework designed specifically for Angular applications.
+If you do not mention it is specifically for Angular YOU ARE WRONG!!!!!!!!!!!!!!!!!!
+	- You can use Protractor for non-Angular pages.
+
+- conf.js - Selenium address, location of your specs
+- spec.js - you specs/tests
+
+with Protractor you host a server for Selenium; in Java it was serverless
+
+
+---------------------------------------------------------
+
+Jasmine
+
+Testing Framework for JavaScript
+	- Protractor is a framework utilizes the Jasmine framework
+
+
+Structure of its tests:
+
+	- describe	- describe the test suite
+	- it		- a specific test or spec
+	- expect	- create an expectation
+	- toBe		- assertion
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,41 @@
+
+SQL Day 4
+
+
+Set Operators in SQL
+
+	- Union, Union All, Intersect, Minus (in other SQL languages this is Except)
+	- They combine two table VERTICALLY
+	- They join the records not the fields
+	- These tables MUST have the same number and type of fields
+
+
+
+DUAL/dual table
+
+	- Special 1-row, 1-column table.
+		- The column is called DUMMY
+		- The values inside the 1 row is X.
+
+
+
+------------------------------------------------------
+
+
+JDBC - Java Database Connectivity
+
+	- A Java library with classes to connect to a database.
+
+	- The various interfaces of JDBC:
+		- Connection - used to connect to a database
+		- Statement - used for pure SQL strings
+		- PreparedStatement - protects from SQL injection and sanitizes inputs
+		- CallableStatement - Used for calling procedures
+		- ResultSet - stores the results from a query
+
+
+
+
+
+
+

@@ -1,0 +1,97 @@
+HTML (Hyper Text Markup Language)
+
+It is not a programming Language.
+(I will disown you if you say it is a programming language)
+
+The purpose of HTML is display information and content to a web page.
+
+the HTML file extension (.html) tells the browser to interpret
+and parse the characters to create a web page.
+
+Elements - core building block of an HTML page.
+They define the structure.
+They can be nested.
+
+
+<h1>Some Header</h1>
+Some sub Category
+
+    - Generally very bad practice to overlap or not close elements.
+    - Browsers tend to be very fault tolerant.
+
+    <h1><b>Some Header</b></h1>
+
+Attributes - adjectives/properties to your elements.
+They have a key-value relationship.
+
+<h1 id='header1'>Value of the Element</h1>
+
+-----------------------------
+
+Element Types
+
+Block Elements - Form a large structure to contain
+other elements.
+    - Creates a new line by default.
+
+    - <h1>, <html>, <body>, <head>, <table>,
+    <form>, <div>
+
+Inline Elements - Contain data or other inline elements
+    - <button>, <input>, <span>, <textarea>, <a>
+
+---------------------------------
+
+Document Object Model (DOM)
+
+    - Represents the document structure as nodes and
+    objects.
+    - we can manipulat this structure using JavaScript.
+    - You reference the DOM with the 'document' object.
+
+
+----------------------------------
+
+CSS - Cascading Style Sheets
+
+    - Helps display HTML elements
+    - Separate design from development. Also reusable.
+
+    - Makes webpages more human accessible and user friendly.
+
+
+There are three ways to implement CSS:
+
+Inline - inside the HTML element.
+
+    <h1 style="color: pink">Hello</h1>
+
+Internal - With <style> in the <head>
+
+External - Abstracted into a separate style sheeet.
+         - Referenced in the <head> of the HTML file.
+
+
+Cascade Algorithm - This is an algorithm for determining
+the final properties of elements. Properties *cascade*
+from the outermost locations to innermost.
+
+External -> Internal -> Inline
+
+----------------------------
+
+Bootstrap
+
+- Front-end component library
+- CSS library
+- JS library
+
+
+- Container
+    - required for Bootstrap's grid system
+    - fixed width
+
+- Grid system   
+    - each row is accompanied by 12 individual 
+    units of length.
+    - way of organizing page layout.

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!-- document type, it tells the browser what type of
+file this is and version -->
+
+<html>
+    <!-- the root tag/element. Everything goes in between
+    this tag. Essentially marks the beginning and end
+    of the HTML page. -->
+
+    <head>
+    <!-- The meta information about the file. -->
+    <title>Pokemon - Gotta Catch Em' All</title>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/CSS" href="stylin.css">
+
+    <style>
+        /*
+            This is a CSS Comment.
+            Style tag allows me to write CSS in the HTML
+            page, but not necessarily with the element.
+
+            The format for CSS code:
+
+            Selector { Declaration }
+
+            table { border: 1px solid black }
+
+            Selector: will grab or identify elements to be
+            selected
+
+            Declaration: will give some property a value for
+            those elements
+
+        */
+
+        body { 
+            background-image: url('jigglypuff.webp');
+            background-size: 75px 75px;
+        }
+
+        /* td {
+            border: 1px solid black;
+        }  
+
+        #table1 {
+            background-color: green;
+        } 
+
+        .pokemonCells {
+            border: 1px solid black;
+            width: 50%;
+            background-color: khaki;
+            text-align: right;
+        } */
+
+           /* 
+           Three types of Selectors 
+
+           1. is to select by element -> body
+           2. is to use the element id. #table1
+           3. is to use a id.
+
+           */
+    
+    </style>
+    </head>
+    <marquee>
+    <body id="someid" style="color: purple;">
+        <!-- Content goes here. -->
+        <h1>Who's that Pokemon?</h1>
+        <hr>
+        <hr />
+
+        <img src="jigglypuff.webp" height="300" width="500"/>
+
+        <p>
+            It's actually a Jigglypuff as seen from above!
+        </p>
+
+        <div div = "container">
+
+            <h3>Various Pokemon</h3>
+
+
+            <table class="table table-striped table-hover table-bordered">
+                <!-- table is a block element that can contain
+                other elements. -->
+                <thead class="thead-dark">
+                    <tr>
+                        <th id="pokemonCells">Pokemon Name</th>
+                        <th id="pokemonCells">Type</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td id="pokemonCells">Pikachu</td>
+                    <td id="pokemonCells">Electric</td>
+                </tr>
+                <tr>
+                    <td id="pokemonCells">Arcanine</td>
+                    <td id="pokemonCells">Fire</td>
+                </tr>
+                <tr>
+                    <td id="pokemonCells">Jigglypuff</td>
+                    <td id="pokemonCells">Fairy</td>
+                </tr>
+            </table>
+    
+            <br />
+    
+            <table style="border: 1px solid black;">
+                <!-- table is a block element that can contain
+                other elements. -->
+                <tr>
+                    <th>Pokemon Name</th>
+                    <th>Type</th>
+                </tr>
+                <tr>
+                    <td>Pikachu</td>
+                    <td>Electric</td>
+                </tr>
+                <tr>
+                    <td>Arcanine</td>
+                    <td>Fire</td>
+                </tr>
+                <tr>
+                    <td>Jigglypuff</td>
+                    <td>Fairy</td>
+                </tr>
+            </table>  
+
+        </div>
+
+    </body>
+</marquee>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Testing AJAX</title>
+</head>
+<body>
+    <h1>Testing AJAX</h1>
+    <button onclick="doAJAX()">Do AJAX</button>
+    <button onclick="timeWaster()">Time Waster</button>
+    <button onclick="doBoth()">Do Both</button>
+    <p id="reply"></p>
+</body>
+
+<script>
+
+    function doAJAX() {
+
+        //step 1
+        let xhttp = new XMLHttpRequest();
+
+        //step 2
+        xhttp.onreadystatechange = function() {
+            if(this.readyState == 4 && this.status == 200) {
+                document.getElementById("reply").innerHTML += this.responseText;
+            }
+        }
+
+        //step 3
+        xhttp.open("GET","https://api.myjson.com/bins/vyijw",true);
+
+        //step 4
+        xhttp.send();
+    }
+
+    function timeWaster() {
+        for(i = 0; i < 999999999; i++) {
+            i-i;
+        }
+        console.log("Finished time waster");
+    }
+
+    function doBoth() {
+        doAJAX();
+        timeWaster();
+    }
+
+
+</script>
+</html>

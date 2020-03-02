@@ -1,0 +1,28 @@
+0000000000000000000000000000000000000000 ed6970798c8efb3f30c1a76b363dd3c36e302bae thomas maestas <thomasm1.maestas@gmail.com> 1580255547 -0500	clone: from https://github.com/revaturelabs/rideshare-frontend
+ed6970798c8efb3f30c1a76b363dd3c36e302bae 1941dc4afe3662c90fa988df9ed27b597696932c thomas maestas <thomasm1.maestas@gmail.com> 1580255742 -0500	checkout: moving from master to dev
+1941dc4afe3662c90fa988df9ed27b597696932c afd259c30e5e4beb8ba5a2a639d62998c1cb3997 thomas maestas <thomasm1.maestas@gmail.com> 1580256148 -0500	checkout: moving from dev to dev-temp
+afd259c30e5e4beb8ba5a2a639d62998c1cb3997 83ed14171af7467f673d45d0b662f09b8405941c thomas maestas <thomasm1.maestas@gmail.com> 1580256169 -0500	checkout: moving from dev-temp to recolon
+83ed14171af7467f673d45d0b662f09b8405941c 83ed14171af7467f673d45d0b662f09b8405941c thomas maestas <thomasm1.maestas@gmail.com> 1580394542 -0500	reset: moving to HEAD
+83ed14171af7467f673d45d0b662f09b8405941c 3eb3f851ecdcd4abe90aa6f1fd1b034fc010cf09 thomas maestas <thomasm1.maestas@gmail.com> 1581260529 -0500	checkout: moving from recolon to MasterUI
+3eb3f851ecdcd4abe90aa6f1fd1b034fc010cf09 69bf22a0337c173aa838cac665eab3545a55a68b thomas maestas <thomasm1.maestas@gmail.com> 1581435800 -0500	pull: Fast-forward
+69bf22a0337c173aa838cac665eab3545a55a68b af9b9548383becae7530db9290ee863b7bf67410 thomas maestas <thomasm1.maestas@gmail.com> 1581435833 -0500	checkout: moving from MasterUI to update
+af9b9548383becae7530db9290ee863b7bf67410 81e81ec0fda5ddaba0d2b4e1579fed7dfd696c76 thomas maestas <thomasm1.maestas@gmail.com> 1581437759 -0500	commit: Driver-list ordering bug fixed client-side
+81e81ec0fda5ddaba0d2b4e1579fed7dfd696c76 dc6206f2ca5cba9c92af2bcb9af6e1fb6c1aea29 thomas maestas <thomasm1.maestas@gmail.com> 1581439393 -0500	commit (amend): Driver-list ordering bug fixed client-side
+dc6206f2ca5cba9c92af2bcb9af6e1fb6c1aea29 54ae7a1fe8196283c92ed0171244c09a11598687 thomas maestas <thomasm1.maestas@gmail.com> 1581439426 -0500	commit (amend): Driver-list ordering bug fixed client-side
+54ae7a1fe8196283c92ed0171244c09a11598687 72f53d06c92778c82e90dca216b6c2cb6da4979a thomas maestas <thomasm1.maestas@gmail.com> 1581605621 -0500	commit: temp-with-production-targets
+72f53d06c92778c82e90dca216b6c2cb6da4979a 69bf22a0337c173aa838cac665eab3545a55a68b thomas maestas <thomasm1.maestas@gmail.com> 1581605627 -0500	checkout: moving from update to MasterUI
+69bf22a0337c173aa838cac665eab3545a55a68b 0f6162d086314256a0caa3ee06c669add022b8db thomas maestas <thomasm1.maestas@gmail.com> 1581605637 -0500	pull: Fast-forward
+0f6162d086314256a0caa3ee06c669add022b8db 0f6162d086314256a0caa3ee06c669add022b8db thomas maestas <thomasm1.maestas@gmail.com> 1581605860 -0500	checkout: moving from MasterUI to version-ec2
+0f6162d086314256a0caa3ee06c669add022b8db 3e47caf752b02ea7b230bbba5a8f145be7bab98c thomas maestas <thomasm1.maestas@gmail.com> 1581610613 -0500	commit: prod version with ec2 endpoints
+3e47caf752b02ea7b230bbba5a8f145be7bab98c 0f6162d086314256a0caa3ee06c669add022b8db thomas maestas <thomasm1.maestas@gmail.com> 1581610680 -0500	checkout: moving from version-ec2 to masterUI
+0f6162d086314256a0caa3ee06c669add022b8db 0f6162d086314256a0caa3ee06c669add022b8db thomas maestas <thomasm1.maestas@gmail.com> 1581610715 -0500	checkout: moving from masterUI to masterUIprod
+0f6162d086314256a0caa3ee06c669add022b8db d6f8891675d120bf358f43cea30ca219bd7eaa9c thomas maestas <thomasm1.maestas@gmail.com> 1581611993 -0500	commit: environment variable baseUri
+d6f8891675d120bf358f43cea30ca219bd7eaa9c b3d348a54e1b17f0d06094c564bc5a7fff21eedf thomas maestas <thomasm1.maestas@gmail.com> 1581613304 -0500	commit: prod
+b3d348a54e1b17f0d06094c564bc5a7fff21eedf 72f53d06c92778c82e90dca216b6c2cb6da4979a thomas maestas <thomasm1.maestas@gmail.com> 1581613331 -0500	checkout: moving from masterUIprod to update
+72f53d06c92778c82e90dca216b6c2cb6da4979a 72f53d06c92778c82e90dca216b6c2cb6da4979a thomas maestas <thomasm1.maestas@gmail.com> 1581618936 -0500	reset: moving to HEAD
+72f53d06c92778c82e90dca216b6c2cb6da4979a b3d348a54e1b17f0d06094c564bc5a7fff21eedf thomas maestas <thomasm1.maestas@gmail.com> 1581618943 -0500	checkout: moving from update to masterUIprod
+b3d348a54e1b17f0d06094c564bc5a7fff21eedf 0f6162d086314256a0caa3ee06c669add022b8db thomas maestas <thomasm1.maestas@gmail.com> 1581624279 -0500	checkout: moving from masterUIprod to masterUI
+0f6162d086314256a0caa3ee06c669add022b8db 0f6162d086314256a0caa3ee06c669add022b8db thomas maestas <thomasm1.maestas@gmail.com> 1581624326 -0500	checkout: moving from masterUI to masterui-prod
+0f6162d086314256a0caa3ee06c669add022b8db 2c9e4e0b0e6c92de0b192e0fa9a453e80f4940a0 thomas maestas <thomasm1.maestas@gmail.com> 1581624541 -0500	commit: production urls
+2c9e4e0b0e6c92de0b192e0fa9a453e80f4940a0 5a3d51d0f59f5c47b7eab54cf5bf47a53e79e3f9 thomas maestas <thomasm1.maestas@gmail.com> 1581625366 -0500	commit (amend): version with backend-ec2-endpoints
+5a3d51d0f59f5c47b7eab54cf5bf47a53e79e3f9 68ef205c73ccb3427726c71c6a5646eacdcb4d55 thomas maestas <thomasm1.maestas@gmail.com> 1581635301 -0500	commit: for-production branch, ec2 targets (regist/mapsAPI confirmed working

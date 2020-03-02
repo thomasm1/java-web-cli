@@ -1,0 +1,162 @@
+Spring Notes
+
+Spring
+	- Lightweight Java framework
+	- Allows for us to make Enterprise level Java Web Applications quicker
+	and easier.
+	- Very modular with modules like: Sping MVC, Spring Data, Spring Test
+	- handles infrastructure so you don't have to.
+
+	- First iteration of Spring in 2006-07
+	- Rod Johnson
+	- Caused Java EE to become free
+
+
+Spring Core
+
+
+	- Spring Container
+		- the core of Spring Framework
+		- creates and configures objects
+	- Your application lives within this container
+	- ApplicationContext (used to be called the BeanFactory) is our Spring Container
+		- aka Spring IOC Container
+		- Inversion of Control
+	- Framework is an application which calls your code
+		- Inversion of Control
+	- The container manages all our Spring Beans, including dependency injection,
+	creation and deletion of a bean.
+	- Spring Container has Dependency Injection
+		- Your classes should not be responsible for creating objects
+		- should almost never need to use the 'new' keyword
+
+	Person class
+		Car car;
+		House house;	--all of these are dependencies
+		String name;
+
+	EmployeeService class
+		- empDAO object
+		- some methods calls this object.
+		- This code is dependent on the empDAO object.
+		- Spring will decouple these dependencies
+
+
+Dependency Injection
+	- Software design pattern wherein we decouple the objects/dependencies
+	of a class with the class being required to create them
+	- A class is NOT responsible for fulfilling its dependencies rather
+	an Injector will provide the appropriate dependency
+	- Types of dependency injection
+		- Constructor
+		- Setter
+		- Interface (not supported by Spring)
+
+
+Spring Bean
+	- A class/object whose life and management within the program is controlled
+	by the Spring IOC Container.
+
+	- Scopes in Spring
+		- Singleton - 1 instance per ApplicationContext
+		- Prototype - As many as we want
+		- Request - 1 Bean per HttpRequest
+		- Session - 1 Bean per HttpSession
+		- GlobalSession - Scoped per Portlet
+
+Stereotype
+	- Annotations denoting the roles or methods in the overall architecture
+		- At a conceptual level, rather than implementation level
+			- @Component
+				- @Controller
+				- @Service
+				- @Repository
+
+
+
+Modules of Spring
+	Spring MVC
+		- A module for creating Spring Web Applications
+		- It utilizes a dispatcher Servlet as a front controller
+		- MVC diagram
+
+	Spring Data
+		- A module for persisting information to a database.
+		- Utilizes repositories to create, read, update, and delete information
+		for our DB.
+		- Setting up Spring DATA
+			- Spring Data dependency
+			- Add database configuration info into the application.properties
+			- @EnableJpaRepositories (Spring Boot App)
+			- Create a repo by extending CrudRepository and marking it
+			with @Repository
+			- @EntityScan (Spring Boot App) to tell Spring DATA where to
+			find the entities in your application
+
+
+Spring Boot
+	- Opinionated Spring framework project which provides RAD (Rapid Application Development)
+	- Makes it easier to create a stand-alone, production-grade Spring-based
+	application that you can "just run"
+	- Opinionated 'starter' dependencies to simplify your build configuration
+	- Embedded Tomcat
+
+	- Benefits:
+		- Easy to understand and develop Spring applications
+		- Increases productivity
+		- Reduces the development time
+
+
+
+
+Spring AOP - Aspect Oriented Programming
+
+	- programming paradigm where you can abstract any code to an "aspect"
+	of your application
+	
+	- Crosscutting concern - some issue/feature that cuts across or is found
+	in multiple levels of your application
+		- Like security or logging
+		- to address crosscutting concerns we like to program aspects
+
+	- aspect - classe that are designed to address these crosscutting concerns
+	
+	- advice - methods which will 'advise' execution of code in the application
+		- Before, After, After Throwing, Around
+
+	- Join-point - any location in your application that can be advised
+
+	- point-cut expression - regex that identifies the join points you want to advise
+
+	Pros
+		- Can address these cross cutting concerns
+		- modular
+		- avoid code entanglement
+
+	Cons
+		- Slightly slower execution
+		- Can be difficult to debug an application with too many aspects
+
+
+
+Spring Bean Lifecycle
+	
+	- Instantiation
+	- Populate Properties
+	- Bean Name Aware	-setBeanAware()
+	- Bean Factory Aware	-setBeanFactory()
+	- Bean Post Processing
+	- After Properties Set
+	- Custom Init Method
+	- Post Initializaion
+
+	- Shutdown of ApplicationContext
+	- PreDestroy called
+	- Destroy
+
+
+
+
+
+
+

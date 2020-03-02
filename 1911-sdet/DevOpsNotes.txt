@@ -1,0 +1,125 @@
+DevOps
+
+What is DevOps?
+
+	- Methodology that combines Development (writing code)
+	and Operations (maintaining infrastructure to merge the code)
+
+	- Goal is to more efficiently produce higher quality code.
+
+
+CI/CD/CD
+
+- Continuous Integration
+	- the process of continually checking code into a
+	central repository and checking if it integrates into
+	the code base.
+		- Make changes to code, push to repo (GitHub), automated building
+		- Example: Jenkins, Travis
+
+- Continuous Delivery
+	- the ability to have code ready for production in a way
+	that is often automated. Release to customer/production is
+	often ready at the press of a button.
+		- This means tests have passed and is ready to go.
+
+- Continuous Deployment
+	- is similar to Continuous Delivery, except code is constantly
+	being deployed to the user. Get feedback even faster.
+
+
+DevOps Tools
+
+- Pipeline
+	- is an automated set of processes that use tools
+	to compile, test, and deploy code for software features.
+
+- Linux
+	- Not so super popular for personal desktop, OS.
+	- Open source, can be adpated for specific needs
+	- Free
+	- Lightweight
+
+- Tomcat
+	- web container, environment that we are going to
+	deploy our packages into.
+
+- Maven
+	- Maven goals:
+	   - clean, validate, test, package, verify,
+	   install, deploy.
+
+- Jenkins
+	- Continuous Integration Tool
+	- Open source automation server
+	- build automation tool; it provides support for
+	automating the process of building and deploying projects.
+	- Allows us to achieve CI/CD/CD
+	- Can include various plugins to integrate with
+	other technologies.
+
+
+
+- Sonar
+	- static code analysis
+	- Code quality analysis tools which expose "code smells", 
+	vulnerabilities, and bugs.
+		- Code smell: this is code that isn't wrong per se, just bad.
+
+	- SonarQube
+	  - Central Server which processes full analyses, which build into
+	    your pipeline.
+
+	- SonarCloud
+	  - Cloud based system where you can configure and view the
+	    application's code analysis on the cloud.
+
+	- SonarLint
+	  - In the IDE, portions of code will be underlined
+	 if there is a perceived issue with it.
+
+
+- Git(Hub)
+	- Git - version control tool
+
+
+
+
+Amazon Web Services - AWS
+
+Infrastructure
+	- IT Infrastructure
+	   - Hardware, software network resources and services
+	required for existence, operation, and management
+	of an enterprise IT environment.
+	
+	- Cloud Computing
+	   - Accessing IT infrastructure over the internet
+	   - Nothing is stored locally except interfaces
+	to access them.
+
+
+	- RDS - Relational Database Service
+	   - Allows us to store a database remotely. As well
+	as manipulate it.
+
+	- Simple Storage Service (S3)
+	   - Highly scalable data storage
+	   - Static web host
+	   - Only pay what you use
+	   - High durability (11 9s -> 99.999999999%) and
+	availability.
+
+
+	- Elastic Compute Cloud (EC2)
+	   - Virtual Server
+
+
+
+
+
+
+
+
+
+

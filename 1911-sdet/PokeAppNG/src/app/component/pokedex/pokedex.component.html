@@ -1,0 +1,30 @@
+<h3>Pokedex</h3>
+
+<p>Feature under construction...</p>
+
+<button (click) = "displayAllPokemon()">Get Pokedex</button>
+
+<div>
+    <input type="number" [(ngModel)] = "id">
+    <input type="text" [(ngModel)] = "name">
+    <input type="text" [(ngModel)] = "type">
+    <button (click) = "addPokemon()">Add Pokemon</button>
+    <!-- <p *ngIf="!validInputs">{{validation}}</p> -->
+    <p>{{validateFields(id,name,type)}}</p>
+    <br>
+</div>
+
+
+<table style="width: 50%; margin-left: 25%">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Type</th>
+    </tr>
+    <tr *ngFor = "let pokemon of pokemonList">
+        <td>{{pokemon.id}}</td>
+        <td>{{pokemon.name}}</td>
+        <td>{{pokemon.type}}</td>
+    </tr>
+</table>
+<!-- <h6 *ngFor = "let pokemon of pokemonList">{{pokemon.id}} {{pokemon.name}} {{pokemon.type}}</h6> -->

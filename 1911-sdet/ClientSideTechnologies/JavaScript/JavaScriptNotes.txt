@@ -1,0 +1,130 @@
+JavaScript Notes
+
+- JavaScript is a functional language.
+- JavaScript is a multiparadigm programming language.
+- JavaScript is a client side programming language ***
+- used to make webpages dynamic.
+
+- Loosely typed
+- No Classes in JavaScript 
+- JIT (Just in Time compilation)
+
+
+Java                        JavaScript
+-----------------------------------------
+compiled language           scripting language (interpreted)
+Strong, static typed        Loosely Typed 
+OOP                         functional 
+Server-side                 Client-side 
+Classes                     No Classes
+Classical inheritance       Prototypal inheritance
+Access Modifiers            No Access Modifiers
+semi-colon required         optional semi-colons
+
+Ham                         Hamster
+
+-----------------------------------------
+
+Data Types
+
+primitives
+----------
+boolean
+number
+string
+null
+undefined
+-----------
+Objects: array, function, etc (Date, user defined Object)
+
+number - uses 'double' precision, infinity
+
+null - indicates that a variable has no value
+
+undefined - value of the variable is unknown
+
+Is JavaScript pass by value or pass by reference?
+
+Pass By Value - primitives
+Pass By Reference - Objects
+
+
+-------------------------------------
+
+Variable Scopes
+
+(Java Scopes: block, method, object/instance, class/static)
+
+
+Block Scope - variable is only accessible within a block.
+    - const, let - declarations are block scope.
+
+Function Scope/Local Scope - variable is accessible within
+a function and any nested functions.
+    - var keyword
+
+Global Scope - Available everywhere in the program.
+    - variables are in the global by default.
+
+
+---------------------------------------------
+
+Objects 
+
+- Objects are a collection of key value pairs 
+- created with with new keyword
+- can use a constructor which is just a function. 
+- can use a literal
+
+
+let person = {
+    name: "Amy",
+    age: 20
+}
+
+
+------------------------------------------------
+
+Arrays
+
+    - have a length value
+    - can be iterated through
+    - can store any number or type of Object.
+
+    let a = [1, 2, 3];
+
+    a.pop();
+    a.shift();
+    a.concat();
+
+
+------------------------------------
+
+functions 
+
+1. They are Objects
+2. Can be anonymous
+3. Can be hoisted
+4. Self-invoking
+5. Can be callback
+
+
+Java:
+public void method() {
+    code;
+}
+
+method();
+
+JavaScript:
+(function () => code;)();
+
+self-invoking function - function that is called immediately
+after being created.
+
+anonymous function - function has no name.
+
+callback function - passing a function as a parameter.
+This is possible because functions are objects.
+
+

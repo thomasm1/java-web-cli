@@ -1,0 +1,84 @@
+
+SQL Day 2
+
+
+CREATE TABLE - does exactly that
+DROP TABLE - destroy a table
+Truncate TABLE - essentially deletes all data from a table, by dropping the table
+		and recreating it.
+DELETE - deleting data from a table
+
+INSERT INTO - adding data to a table			C
+SELECT - retrieve data or records from a table		R
+UPDATE SET - update records in a table			U
+DELETE - removing data					D
+
+WHERE - an extra clause to specify which records to return
+
+GROUP BY - is used to group records into groups/buckets
+HAVING - is used with GROUP BY in place of a WHERE clause,
+	since you can't filter rows, but instead can filter whole groups
+
+ORDER BY - sort your records based on a field.
+
+desc - reverses the order used by ORDER BY
+
+LIKE - return all strings of a certain pattern
+
+NOT - opposite of whatever follows
+
+BETWEEN (with AND) to specify a range of values
+
+IN - specify a set of values
+
+commit - finalize a transaction
+rollback - undo everything in the current transaction
+
+
+----------------------------------------------------
+
+Alias - a way to simplify the name of a table.
+
+Aggregate Functions - returns a single output from an array of inputs
+	- AVG, SUM, COUNT, MAX, MIN
+
+Scalar Functions - returns a single output from a single input
+	- round, trim, substr, to_char
+
+
+
+----------------------------------------------------
+
+Constraints - rules used to specify what data can be added to a column.
+
+	- Primary Key - Unique identifier. Used to identify each record.
+			- combination of Unique and Not Null Keys.
+
+	- Foreign Key - Used to establish a relationship between another table 
+	with a Primary Key.
+
+	- Default Key - Specifies a default value for a column
+
+	- Not Null Key - ensures that values in the column can not be null
+
+	- Unique Key - Ensures that values in the column are unique
+
+	- Check Key - Checks the data being inserted across some value
+
+	- Composite Key - Primary key made up of 2 or more fields.
+
+
+--------------------------------------------
+
+Orphan Record - Record that references a key that no longer exists.
+
+Referential Integrity - Principle that foreign keys a in table referring to
+another table should ALWAYS refer to a valid row in that referred-to table.
+
+
+
+
+
+
+
+

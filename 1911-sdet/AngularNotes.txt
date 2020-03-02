@@ -1,0 +1,228 @@
+
+Angular
+
+
+node.js - is a JavaScript Runtime Environment. We use node to run JS server side.
+We do not need a browser to run JS.
+
+(MEAN - MERN)
+MongoDB - Express - Angular - Node
+		  - React
+
+NPM - node package manager - This is our dependency manager similar to Maven
+except instead of Java it is JavaScript on node.js.
+
+package.json - It is a list of dependencies for our node project.
+	- listed in a JSON format.
+
+we can install dependencies using *npm install [dependencyName]*
+
+
+SPA - Single Page Application - is a website wherein there is only one
+main html page and html/js/css is dynamically inserted and removed to create a smooth
+browsing experience.
+
+
+AngularJS - was the original Angular. It was written in JavaScript.
+
+
+Angular 2.0 - A SPA framework designed by Google. It is written in TypeScript.
+Angular 2.0 and up are just called Angular.
+
+
+Angular CLI - Command Line Interface - command line utility to generate:
+projects, components, services, pipes
+	- ng [some command], ng new [projectName], ng generate [something] [nameOfSomething]
+	- ng generate component myComponent
+	- ng g c myComponent
+	- ng g s myService
+
+
+Angular
+	- JavaScript/TypeScript Framework for building SPA.
+	- Allows for expressive HTML and is modular.
+	- The functional gear of an Angular is the component.
+
+
+Module
+	- The highest level of design in Angular.
+	- Cohesive block of components that provide some functionality.
+	- All Angular apps have at least the root-module.
+	- The root module will bootstrap a root-component.
+
+
+Bootstrapping
+	- process of an intial piece of code pulling in more code
+	which can in turn pull in more code and builds off itself.
+	- chaining chunks together.
+
+
+Component
+	- The functional gear of Angular
+
+	4 files that are generated when you create a component*
+	
+	1. HTML template (view)
+	2. CSS file
+	3. TS file
+	4. spec.ts file
+
+	- Component Decorator - (Meta information and labeling for that component)
+	- @Component
+		- selector: the name of the HTML tag for this component
+		- template URL: the location of the HTML for the component
+		- style URL: the location of the CSS for the component
+
+
+------------------------------------------
+
+
+TypeScript - A superset of JavaScript
+
+	- Created by Microsoft
+	- provides more OOP support than JS. It has classes and access modifiers.
+	- interfaces
+	- Strongly typed
+	- You cannot run a TypeScript
+	- TypeScript will transpile into JavaScript and that JS will run.
+
+
+Access Modifiers
+	- public - functions just like Java
+	- private - functions just like Java
+	- protected - functions just like Java
+
+	(Non-Access Modifiers)
+	- readonly - value cannot be changeds and must be intialized on when created.
+
+Data Types
+	- number, string, boolean, null, undefined, array, enum, void, any, never
+
+
+Advantages of TypeScript
+	- More OOP
+	- Static, Strong Typing
+	- Catch more errors at compile time
+
+
+--------------------------------------------------
+
+
+Data Binding
+
+	- interpolation
+		TS => HTML		{{variableName}}
+
+	- event binding
+		HTML => TS		(event) = "someFunction()"
+
+	- attribute/property binding	[src] = "variable"
+		TS => HTML
+
+	- two way binding
+		HTML <==> TS		[(ngModel)] = "variable"
+
+
+
+--------------------------------------------------
+
+
+Directives - Custom HTML
+
+	- 3 Types of Directives
+
+
+	- Structural Directive, like *ngIf and *ngFor, add/remove HTML elements
+	which are the building blocks of a webpage. That is why they are called
+	structural directive.
+
+	- Attribute Directive, -like ngModel -custom HTML attributes
+
+	- Component Directive - which is a custom HTML tag. Provides a custome
+	view and functionality
+
+
+
+--------------------------------
+
+pipe |
+
+A pipe will tranform some sort of input into a different output
+before displaying in the HTML
+
+	10 | currency : 'USD'	->	$10.00
+
+	TS file:
+	num :number = 15
+
+	HTML file:
+	num | currency : 'USD'	->	$15.00
+
+
+	ng generate pipe myPipeName
+	
+	ng generate pipe /pipe/myPipeName
+
+
+------------------------------------
+
+How to Set up Routing
+	1. import RouterModule		//Already done, Thank you Angular 7.
+	2. app-routing.module.ts file:
+		const routes :Routes = [{path: 'url1', component: myComponent}]
+	3. in the imports section: RouterModule.forRoot(routes) //this is already done
+					//Thank you Angular 8.
+	4. <router-outlet></router-outlet>
+
+
+-------------------------------------
+
+How to make an HTTP call
+
+	1. import HttpClientModule and add it to imports (app.module.ts) ONLY ONCE.
+	2. import HttpClient to whatever class is going use it, or have an HTTP call.
+	3. add a private HttpClient variable to the constructor
+	4. Make an HTTP call, using that variable defined in step 3.
+			- http.get<pokemon>('url')
+			- http.get('url').pipe(map (resp => resp = pokemon))
+
+	5. Once you have an Observable you can subscribe to it which starts
+	the actual asynchronous call.
+
+
+Observable
+	- Asynchronous object that represents a stream of data.
+	- You can create Observables by setting up an HTTP call.
+	- You then subscribe to the Observable.
+	- The subscribe method takes in callback functions that handle if the call
+	is successful, unsuccessful, and when complete.
+
+
+-------------------------------------------
+
+Steps to creating a Service and using it in a class
+	1. ng generate service [serviceName]
+	1.5 the service has the @Injectable decorator which says the Angular Injector
+	can inject this class into other classes.
+	2. Add the Service to the Provider
+	3. Add the Service to the constructor of the class using it.
+		- constructor(private pokeservice :PokemonService)
+
+
+Dependency Injection
+	- Design Pattern where a class receives an instance of an Object it needs to
+	function in the constructor. This instance that is injected is shared among classes.
+	- Change only one class and have it affect multiple classes without having to refactor.
+	- In Angular we see this in services which provide some sort of utility to
+	different components.
+	- In general, if we need a certain function that is not component specfic it
+	should be a service.
+
+
+
+
+
+
+
+
+

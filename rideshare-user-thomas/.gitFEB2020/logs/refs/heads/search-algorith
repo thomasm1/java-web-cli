@@ -1,0 +1,2 @@
+0000000000000000000000000000000000000000 d16f50995167ed4d4d37bd776634e7ce3b7f9048 thomas maestas <thomasm1.maestas@gmail.com> 1580325640 -0500	branch: Created from HEAD
+d16f50995167ed4d4d37bd776634e7ce3b7f9048 c5bd299df9e8021590e04b423e08c249d9d7c9b7 thomas maestas <thomasm1.maestas@gmail.com> 1580329825 -0500	commit: connected to postgreSQL AWS-RDS; connect JPA postgreSQL driver

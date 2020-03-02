@@ -1,0 +1,3 @@
+0000000000000000000000000000000000000000 a88a13472e9565cacf9a4b40cbdad9884ec44a4c thomas maestas <thomasm1.maestas@gmail.com> 1581105658 -0500	branch: Created from HEAD
+a88a13472e9565cacf9a4b40cbdad9884ec44a4c 419d05b3cfd501ca05f9aacb85d9613ffac1c663 thomas maestas <thomasm1.maestas@gmail.com> 1581105884 -0500	commit: issues
+419d05b3cfd501ca05f9aacb85d9613ffac1c663 806a6939c90d27d9ed42215aebf574ff59a2e823 thomas maestas <thomasm1.maestas@gmail.com> 1581105926 -0500	commit (amend): does not read in data from user repository

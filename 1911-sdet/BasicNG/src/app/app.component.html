@@ -1,0 +1,62 @@
+
+<h1>This is the root component</h1>
+<h3>This is the first component bootstrapped into our index.html</h3>
+
+
+<!-- Data Binding in Angular -->
+<!-- data binding is linking values in our TS to our HTML
+and vice versa -->
+
+<!-- Interpolation use double curly brace notation
+    - double moustache
+    - TS => HTML -->
+
+<h4>{{hello}} to Everyone!</h4>
+
+<!-- Event Binding is actions on the DOM causing changes/functions
+to be called in the code.
+    Has () notation
+    HTML => TS -->
+<button (click) = "saySomething()">Say Something</button>
+<hr>
+<!-- property/attribute binding: a value stored in code
+is used to update an attribute/property in the HTML
+    Bracket Notation [attribute]
+    TS => HTML -->
+<div>
+  <a [href] = "website">{{website}}</a>
+  <button (click) = "changeWebsite()">Change Website</button>
+</div>
+
+<!-- Two Way Data Binding
+    [()] Notation
+    HTML <==> TS -->
+<input type="text" [(ngModel)] = "talk">
+<h3>{{talk}}</h3>
+
+
+<!-- Directives -->
+<button (click) = "showText()">Show Text</button>
+<p *ngIf="showParagraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam blanditiis non repudiandae fugit voluptatum earum dolorum maiores id rerum, hic illum dolore laboriosam itaque optio dolorem suscipit porro pariatur minima odit est molestiae odio? Blanditiis, corporis? Expedita dolor commodi fugiat consequatur odit culpa sit dolorum ad ab! Labore tempore beatae dolorem, dignissimos assumenda, vitae officia maiores facere molestias praesentium dolore veniam culpa dolores in enim. Iusto ipsam ab voluptatibus corrupti ipsa minus quasi deleniti amet totam, qui ea magni autem tempora, hic voluptate illum! Magni quia aut adipisci ex nam eum libero vero deserunt, aspernatur illum aperiam nobis neque facilis!</p>
+
+<table style="border: 1px solid black">
+    <tr>
+        <th>SSBU Characters</th>
+    </tr>
+    <tr *ngFor="let character of superSmashCharacters">
+        <td style="border: 1px solid black">{{character}}</td>
+    </tr>
+</table>
+
+<input type="text" [(ngModel)] = "character">
+<button (click) = "addCharacter()">Add Character</button>
+<button (click) = "clearText()">Clear Text</button>
+<button (click) = "clearAll()">Clear Table</button>
+
+<!-- Component Directive -->
+<app-simple></app-simple>
+<!-- <app-second></app-second> -->
+
+<h4>{{money | currency : 'EUR'}}</h4>
+<input type="number" [(ngModel)] = "coins">
+<button (click) = "addMoney()">Add Funds</button>

@@ -1,0 +1,154 @@
+
+Servlets
+
+Web Server - is a computer that is designed to handle HTTP Requests
+
+Servlet - Is a Java Object designed to handle incoming requests (Not solely HTTP).
+Servlets can process requests and generate responses using Java logic.
+
+Servlet Container - It contains one to many Servlets and is primarily responsible
+for mapping the Servlets to different addresses. Configures our Servlets.
+
+web.xml (Deployment Descriptor) - Gives the Servlet Container the mapping and configuration
+details. Decides what requests are handled by a Servlet.
+
+Tomcat - Is a server designed by Apache that will host or house our Servlet Container.
+
+
+
+--------------------------------------
+
+Servlet Lifecycle
+
+1. Servlet Class is loaded into the Servlet Container.
+2. Servlet Class is instantiated.
+3. Servlet init() method is called. The init() method of the Servlet Class is run
+ONLY ONCE and sets up initial configurations/parameters.
+	- Lazy init() is called upon the first request to a Servlet.
+	- Eager init() is called as soon as the application starts.
+4. Servlet service() method is called upon EACH time a request is delegated to the Servlet.
+The service() method delegates the request to various HTTP methods. doGet(), doPost(), etc.
+5. Servlet destroy() method is only called ONCE and this is when the application is
+shut down.
+
+
+--------------------------------------
+
+
+ServletConfig - is an Object specific to a single Servlet to holds information
+on that Servlet.
+
+ServletContext - is an Object that holds information about the entire Servlet Container
+and thus all Servlets.
+
+
+
+----------------------------------------
+
+Session Handling:
+
+ways to store or track information:
+
+	- Session -> HttpSession
+	- Cookie
+
+
+	- URL rewriting
+	- Hidden forms
+	
+		<form>
+			<input type='text'>
+			<input type='submit'>
+
+			<input type='hidden' id='password'>My Password</input>
+		</form>
+
+
+-----------------------------------
+
+URL vs URI
+
+URI - Uniform Resource Identifier
+	- identifies a file or resource/servlet
+
+URL - Uniform Resource Locater
+	- URL = domain name (host + port) + URI + parameters
+
+
+https://www.google.com/
+https://localhost:8080/Project1/addUser.do
+https://www.google.com/search?source=hp&ei=7-sQXaPBEOXI_Qbd06TYBQ&q=super+smash+bros+ultimate+characters&oq=super+smash+bros+ultimate+cha&gs_l=psy-ab.3.0.0l10.3508.8858..9842...0.0..0.84.1065.17......0....1..gws-wiz.....0..0i131j0i10.54MB9NOH3GQ
+https://app.slack.com/client/TR06PJE9L/CQK6ZEDU2
+
+
+------------------------------------
+
+Front Controller Design Pattern - all requests are handled by a central or front
+controller -> Servlet
+	- Ihis acts kind of like a bouncer.
+
+------------------------------------
+
+
+Forward vs Redirect
+
+
+Redirect - Sends a response back (Status 300s) with the correct request that needs
+to be sent. Then a new request is made to the new resource. URL changes.
+
+Forward - Sends the request to the correct resource. URL does not change. Limited to
+resources accessible by this application.
+
+-------------------------------------
+
+
+HTTP - HyperText Transfer Protocol - A way of transferring information
+	- It sends requests and receives responses.
+	
+	- All protocols are just a way of transferring information
+	- UDP, TCP, FTP, HTTPS, SFTP, SMS, SMTP (email), SSH, RDP
+
+HTTP Status Codes:
+
+100s - information
+200s - Success
+300s - Redirects
+400s - Client side errors
+500s - Server side errors
+
+
+HTTP Methods:
+
+CREATE	- POST
+READ	- GET
+UPDATE	- PUT
+DELETE	- DELETE
+
+PATCH, OPTIONS, TRACE, HEAD
+
+
+idempotent - Math term for operations that can be performed 1 to infinity times
+and it does not change the result. *1, /1, +0, -0, |abs|, ^0, %, (+1 -1)
+
+
+POST	- Not Idempotent
+GET	- Idempotent
+PUT	- Idempotent
+DELETE	- Idempotent
+
+
+
+HTTP Request
+	- HTTP Version
+	- HTTP Method
+	- URL
+	- Request Headers, meta information about the request
+	- Request Body, GET will have an empty body
+
+HTTP Response
+	- HTTP Version
+	- Status Code
+	- Response Headers
+	- Response Body
+
+

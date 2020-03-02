@@ -1,0 +1,156 @@
+Web Services
+
+SOA - Service Oriented Architecture
+	- Emphasis on loose-coupling and black-box implementation
+	- building architecture for business and enterprise applications
+
+Service - as a discrete unit of functionality
+	- Login Service
+	- Bank Transaction Service
+	- Services can be accessed remotely and independently
+	- Services are self contained
+	- Services might be composed of other services
+
+As companies grow, requirements or changes to software happen. Slight changes in
+requirements between departments can be very difficult to implement.
+
+	- What have we used to create web services?
+		- Spring Web
+			- Spring MVC
+			- Spring REST
+
+
+ReST - Representational State Transfer
+	- Architecture used to construct web APIs
+		- Uses solely HTTP
+		- Can produce several media types: JSON, XML, Plain Text, etc.
+
+
+REST Constraints (6 of them) - RESTful (APIs)
+
+1. Client Server architecture - Separation of concerns
+	- The UI is indepent from the resources
+
+2. REST is stateless
+	- No maintaining of the session or information stored on the server
+
+3. Cachability
+	- Ability to choose to cache a response on the client side
+
+4. Layered System
+	- You can stack a web service on top of another web service
+	- You can create isolation and is often used for security
+
+5. Code on demand (optional)
+	- The ability to transfer executable code
+
+
+6. Uniform Interface
+	- standard set of rules for clients to more easily access and use REST.
+
+	6.1 - Indentification of resources
+		- reources are identified via the URI
+		- "/associates/1"
+
+	6.2 - Manipulation of resources through representations
+		- The response that you receive from a REST call can take many forms
+			- JSON, XML, Plain Text, PNG
+		- You do not send back the resource itself, but a representation of it.
+
+	6.3 - Self-descriptive messages
+		- Each request contains all the information necessary to process the
+		request.
+		- It should have all the security tokens on how to interpret the message.
+
+	6.4 - Hypermedia as the engine of the application state (HATEOAS)
+		- A response should have links to other helpful URIs in the WebService
+
+-----------------------------------------------------
+
+
+SOAP - Simple Object Access Protocol
+	
+	- WSDL - Web Service Description(new)/Definition(old) Language - a contract with
+	all the necessary information needed to use my web service.
+
+	- Tags in the WSDL
+		- <binding> - Protocol and how to connect to my service
+		- <service> - where to access the service endpoint
+		- <operations> - methods available for my web service
+			- <input> and <output>
+		- <type> - breaks down any special or custom types/"objects" into primitives
+		- <message> - A message will contain the parameters for an input and output.
+			- <message> int age, String name</message>
+		- <definitions> - root taf of the WSDL
+
+	- SOAP uses XML and only XML
+	- SOAP can use various protocols, not just HTTP
+
+
+
+
+	- SOAP message
+		
+	<envelope>
+		<header> - optional, meta info, mustUnderstand attribute - says
+		that the message must be read without errors to be properly processed
+
+		<body> - contains your message
+
+
+			<fault> - optional, will contain information about errors
+				1 - VersionMismatch - found an invalid namespace in the
+				SOAP Envelope
+				2 - MustUnderstand - some child element, with the
+				mustUnderstand attribute was not understood
+				3 - Client - the massage was incorrectly formed or
+				contained incorrect information
+				4 - Server - the problem was with the server, so the
+				message could not proceed.
+		</body>
+
+	</envelope>
+
+
+	- SOAP can implemented Contract First or Contract Last
+
+	- Contract First - Define a WSDL and make an application based on that contract
+	- Contract Last - Develop an application and we defined a WSDL based on that application
+
+
+
+REST					SOAP
+
+- Architectural style			- Protocol
+
+- no contract/hopefully			- Contract based - WSDL
+there is documentation
+that will tell me how to use
+the endpoints
+
+- JSON, XML, TXT, HTML			- XML
+
+- HTTP					- Any* Protocol
+
+- low bandwidth. A JSON is pretty	- Each SOAP envelope is pretty large
+small					all the structured XML comes with any message
+
+- Cachable				- SOAP is not
+
+- Low/Loose Coupling between		- Tighter Coupling
+the service and the client
+
+
+
+
+Marshalling - Java Object into XML		- Any media type
+Unmarshalling - XML into Java Object
+
+
+
+
+
+
+
+
+
