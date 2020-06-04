@@ -1,0 +1,1 @@
+<a href="https://github.com/intuit/karate"><img src="https://github.com/intuit/karate/blob/master/karate-core/src/main/resources/karate-logo.svg" height="60" width="60"/></a>

@@ -1,0 +1,1 @@
+[Home](https://github.com/intuit/karate) | [Support](https://github.com/intuit/karate/wiki/Support) | [Community News](https://github.com/intuit/karate/wiki/Community-News) | [UI / Stand-alone Executable](https://github.com/intuit/karate/wiki/Karate-UI)
